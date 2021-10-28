@@ -61,7 +61,7 @@ router.post('/run', async (req: Request, res: Response) => {
 //callbacks for storing to Disk Storage
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'lib/')
+        cb(null, 'routes/')
     },
     filename: function (req, file, cb) {
         cb(null, 'code.jpeg')
