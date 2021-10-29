@@ -18,7 +18,7 @@ import LinkingConfiguration from './LinkingConfiguration'
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
     return (
         <NavigationContainer linking={LinkingConfiguration} theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-            <RootNavigator />
+            <BottomTabNavigator />
         </NavigationContainer>
     )
 }
@@ -27,8 +27,14 @@ const Stack = createNativeStackNavigator<RootStackParamList>()
 
 function RootNavigator() {
     return (
-        <Stack.Navigator>
-            <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+        <Stack.Navigator
+            screenOptions={{
+                headerTintColor: 'white',
+                headerTitleAlign: 'center',
+                headerStyle: { backgroundColor: '#0B4068' },
+            }}
+        >
+            <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
             <Stack.Group screenOptions={{ presentation: 'modal' }}>
                 <Stack.Screen name="Compiler" component={CompilerScreen} />
@@ -58,16 +64,21 @@ function BottomTabNavigator() {
                     left: '5.51%',
                     right: '5.51%',
                     bottom: '2%',
-                    padding: 5,
+                    padding: 2,
                     backgroundColor: '#0B4068',
                 },
+
+                headerTintColor: 'white',
+                headerTitleAlign: 'center',
+                headerStyle: { backgroundColor: '#0B4068' },
             }}
         >
             <BottomTab.Screen
                 name="Home"
-                component={Home}
+                component={RootNavigator}
                 options={({ navigation }: RootTabScreenProps<'Home'>) => ({
                     title: 'Home',
+                    headerShown: false,
                     tabBarIcon: ({ color }) => <MaterialIcons name="home" color={color} size={30} />,
                     headerRight: () => (
                         <Pressable
@@ -86,7 +97,7 @@ function BottomTabNavigator() {
                 component={Questionnaire}
                 options={{
                     title: 'Questionnaire',
-                    tabBarIcon: ({ color }) => <FontAwesome name="file-text-o" color={color} size={30} />,
+                    tabBarIcon: ({ color }) => <FontAwesome name="file-text-o" color={color} size={26} />,
                 }}
             />
             <BottomTab.Screen
@@ -100,16 +111,3 @@ function BottomTabNavigator() {
         </BottomTab.Navigator>
     )
 }
-
-const styles = StyleSheet.create({
-    barStyle: {
-        borderRadius: 50,
-        backgroundColor: 'orange',
-        position: 'absolute',
-        overflow: 'hidden',
-        left: 0,
-        bottom: 0,
-        right: 0,
-        padding: 5,
-    },
-})
