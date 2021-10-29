@@ -1,16 +1,26 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function Home({ navigation }: RootTabScreenProps<'Home'>) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab One</Text>
+      <TouchableOpacity
+              onPress={() => navigation.navigate('Compiler')}
+             >
+             <Text style={styles.title}>vfjvb</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Opportunities')}
+             >
+             <Text style={styles.title}>vfjvb</Text>
+            </TouchableOpacity>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <EditScreenInfo path="/screens/Home.tsx" />
     </View>
   );
 }
