@@ -32,9 +32,10 @@ function RootNavigator() {
                 headerTintColor: 'white',
                 headerTitleAlign: 'center',
                 headerStyle: { backgroundColor: '#0B4068' },
+                headerTitleStyle: { fontWeight: '800' },
             }}
         >
-            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="DRONA" component={Home} />
             <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
             <Stack.Group screenOptions={{ presentation: 'modal' }}>
                 <Stack.Screen name="Compiler" component={CompilerScreen} />

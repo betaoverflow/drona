@@ -7,7 +7,7 @@ const linking: LinkingOptions<RootStackParamList> = {
     prefixes: [Linking.makeUrl('/')],
     config: {
         screens: {
-            Home: {
+            DRONA: {
                 screens: {
                     Home: 'home',
                 },

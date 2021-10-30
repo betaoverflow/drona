@@ -9,7 +9,7 @@ declare global {
 }
 
 export type RootStackParamList = {
-    Home: NavigatorScreenParams<RootTabParamList> | undefined
+    DRONA: NavigatorScreenParams<RootTabParamList> | undefined
     Compiler: undefined
     NotFound: undefined
 }
