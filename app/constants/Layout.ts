@@ -8,7 +8,7 @@ export const SIZES = {
   base: 8,
   font: 14,
   radius: 12,
-  padding: 24,
+  padding: 120,
 
   //fontSizes
   navTitle: 25,
@@ -47,3 +47,4 @@ export const FONTS = {
 };
 
 const customTheme = {SIZES, FONTS};
+export default customTheme;

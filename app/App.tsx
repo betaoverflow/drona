@@ -18,7 +18,7 @@ export default function App() {
       <SafeAreaProvider>
         <Navigation colorScheme={colorScheme} />
         <StatusBar />
-        <Firebase />
+        {/* <Firebase /> */}
       </SafeAreaProvider>
     );
   }

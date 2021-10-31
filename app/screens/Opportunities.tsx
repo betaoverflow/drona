@@ -21,13 +21,14 @@ const renderItem: ListRenderItem<OpportunityType> = ({item}) => (
 
 export default function Opportunities() {
   const [opportunites, setOpportunities] = useState<OpportunityType[] | null>(oppData);
-  
+
   return (
-    <View>
+    <View style = {{backgroundColor: 'black'}}>
       <FlatList
         data={opportunites}
         renderItem={renderItem}
         keyExtractor={item => item.id}
+        numColumns={2}
       />
     </View>
   );
