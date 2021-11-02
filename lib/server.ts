@@ -14,10 +14,10 @@ app.use(cors())
 // controller
 var routes = require('../routes/routes')
 var questionRoutes = require('../controller/questionController')
-// var authRoutes = require('../controller/authController')
+var authRoutes = require('../controller/authController')
 app.use('/', routes)
 app.use('/api/questions', questionRoutes)
-// app.use('/auth', authRoutes)
+app.use('/auth', authRoutes)
 
 app.listen(PORT, () => {
     console.log('Server running at: ' + PORT)
