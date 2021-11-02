@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express'
 import multer from 'multer'
 
 const { generateFile } = require('../utils/generateFile')
-const { executeCpp } = require('../bin/executeCpp')
+const { executeCpp } = require('../bin/excecuteCpp')
 const { executePy } = require('../bin/excecutePy')
 
 var router = express.Router()
@@ -11,7 +11,7 @@ router.get('/', (req: Request, res: Response) => {
     return res.json({ TeamName: 'Betaoverflow' })
 })
 
-const fileName = (__dirname + './code.jpeg') as string
+const fileName = (__dirname + '/code.jpeg') as string
 
 // dummy function
 // actual: run detection algo and get text
@@ -41,7 +41,7 @@ router.post('/run', async (req: Request, res: Response) => {
         // generate a file
         const filepath: any = await generateFile(lang, code)
 
-        let output
+        let output = 'blah blah'
         // run the file and send the response
         if (lang === 'cpp') {
             output = await executeCpp(filepath)
