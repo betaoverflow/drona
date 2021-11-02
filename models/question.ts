@@ -1,17 +1,9 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
 
-export interface QuestionDocument extends mongoose.Document {
-    title: string
-    message: string
-    isApproved: boolean
-}
-
-const QuestionSchema = new mongoose.Schema({
+var question = mongoose.model('question', {
     title: { type: String },
     message: { type: String },
     isApproved: { type: Boolean, default: false },
 })
 
-const Question = mongoose.model<QuestionDocument>('Question', QuestionSchema)
-
-export default Question
+module.exports = { question }
