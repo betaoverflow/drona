@@ -2,12 +2,13 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Button = styled.span`
-background-color: blue;
-color: #fff;
+font-size: 30px;
+font-weight: bold;
+color: #000;
 padding: 10px;
 border-radius: 3px;
-width: 80px;
 margin: 1rem;
+text-decoration: underline;
 `
 
 const Heading = styled.span`
@@ -26,6 +27,22 @@ const Number = styled.span`
 font-family: sans-serif;
 font-size: 270px;
 opacity: 0.2;
+
+@media (max-width: 800px){
+    font-size: 170px;
+}
+
+@media (max-width:500px){
+    font-size: 100px;
+}
+`
+
+const Container = styled.span`
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 `
 
 const Container1 = styled.span`
@@ -55,23 +72,25 @@ justify-content: center;
 export default function Custom404() {
     return (
         <>
+        <Container>
 
-        <Container1>
-            <Subheading>Oops, something went wrong, but</Subheading>
-            <Heading>DONUT WORRY</Heading>
-        </Container1>
+            <Container1>
+                <Subheading>Oops, something went wrong, but</Subheading>
+                <Heading>DONUT WORRY</Heading>
+            </Container1>
 
-        <Container2>
-            <Number>4</Number>
-            <img src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635785251/donut1_mx9gpv.png" alt=""/>
-            <Number>4</Number>
-        </Container2>
-        
-        <Container3>
-            <Subheading>It will be fixed soon</Subheading>
-            <Button>Go back</Button>
-        </Container3>
+            <Container2>
+                <Number>4</Number>
+                <img src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635785251/donut1_mx9gpv.png" alt=""/>
+                <Number>4</Number>
+            </Container2>
+            
+            <Container3>
+                <Subheading>It will be fixed soon</Subheading>
+                <Button><a href=''>Go Back</a></Button>
+            </Container3>
 
+        </Container>
         </>
     )
         
