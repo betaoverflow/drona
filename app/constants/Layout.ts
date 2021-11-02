@@ -22,6 +22,7 @@ export const SIZES = {
   body3: 16,
   body4: 14,
   body5: 12,
+  profile: 100,
 
   //dimension
   window: {
