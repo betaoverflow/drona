@@ -1,6 +1,5 @@
 import React from 'react'
 import { Grid, Button, TextField } from '@material-ui/core'
-import { Checkbox } from '@material-ui/core'
 import styles from '../styles/admin.module.scss'
 import Head from 'next/head'
 
@@ -19,7 +18,7 @@ const Admin = () => {
                 <Grid container className={styles.card}>
                     <Grid item xs={12} sm={12} md={7}>
                         <img
-                            src="https://cdn.dribbble.com/users/345970/screenshots/14741336/media/0d7f0ffe406091da256fa30df972e439.png"
+                            src="https://cdn.dribbble.com/users/721278/screenshots/15322527/dribbble.png"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                     </Grid>
@@ -52,7 +51,7 @@ const Admin = () => {
                                 // onChange={e => setTitle(e.target.value)}
                             />
                             <br />
-                            <Button style={{ backgroundColor: '#0B4068', color: '#FFFFFF', width: '160px' }}>Log IN</Button>
+                            <Button style={{ backgroundColor: '#000', color: '#FFFFFF', fontWeight: 800 }}>Log In</Button>
                         </div>
                     </Grid>
                 </Grid>
