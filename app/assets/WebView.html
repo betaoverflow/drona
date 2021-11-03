@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="module">
+    import {CodeJar} from 'https://medv.io/codejar/codejar.js'
+  </script>
+</head>
+
+<body>
+  <h1>Code Jar</h1>
+  <div class="editor"></div>
+  <script>
+    let jar = CodeJar(document.querySelector('.editor'), Prism.highlightElement)
+  </script>
+</body>
+</html>
