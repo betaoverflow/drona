@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <ThemeProvider>
             <div className={styles.container}>
                 <Head>
-                    <title>Playground</title>
+                    <title>Drona</title>
                     <link rel="manifest" href="/manifest.json" />
                     <link rel="apple-touch-icon" href="/256x256.png"></link>
                     <meta name="theme-color" content="#fff" />
