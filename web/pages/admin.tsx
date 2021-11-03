@@ -28,8 +28,6 @@ const Admin = () => {
 
                             <div className={styles.heading}>Log in to your account</div>
 
-                            {/* <div className={styles.login}>Email Address</div> */}
-
                             <TextField
                                 id="outlined-basic"
                                 variant="outlined"
@@ -40,7 +38,6 @@ const Admin = () => {
                                 // onChange={e => setTitle(e.target.value)}
                             />
 
-                            {/* <div className={styles.login}>Password</div> */}
                             <TextField
                                 id="outlined-basic"
                                 variant="outlined"
