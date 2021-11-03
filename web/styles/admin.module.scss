@@ -55,6 +55,27 @@
     font-size: 1.5rem;
 }
 
+.name{
+    text-align: left;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #0B4068;
+    padding-bottom: 1.5rem;
+}
+
+.heading
+{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #0B4068;
+    padding-bottom: 2rem;
+}
+
+.remember{
+    text-align: left;
+}
+
 @media (max-width: 600px) {
     .grid {
         width: 100%;

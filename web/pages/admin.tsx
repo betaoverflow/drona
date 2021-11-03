@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Button, TextField } from "@material-ui/core";
+import { Checkbox } from "@material-ui/core";
 import styles from '../styles/admin.module.scss';
 
 const Admin = () => {
@@ -25,29 +26,35 @@ const Admin = () => {
 
                             <div className={styles.heading}>Log in to your account</div>
                             
-                            <div className={styles.login}>Email Address</div>
-                            <TextField
-                                label="Email address"
-                                margin="normal"
-                                type="email"
-                                // onChange={e => setTitle(e.target.value)}
-                                className={styles.formText}
+                            {/* <div className={styles.login}>Email Address</div> */}
+
+                            <TextField 
+                            id="outlined-basic" 
+                            variant="outlined" 
+                            label="Email address"
+                            margin="normal"
+                            type="email"
+                            className={styles.formText}
+                            // onChange={e => setTitle(e.target.value)}
                             />
 
-                            <div className={styles.login}>Password</div>
-                            <TextField
-                                label="Password"
-                                margin="normal"
-                                type="password"
-                                // onChange={e => setMessage(e.target.value)}
-                                className={styles.formText}
+                            {/* <div className={styles.login}>Password</div> */}
+                            <TextField 
+                            id="outlined-basic" 
+                            variant="outlined" 
+                            label="Password"
+                            margin="normal"
+                            type="email"
+                            className={styles.formText}
+                            // onChange={e => setTitle(e.target.value)}
                             />
-                            <div className={styles.remember}>Keep me logged in</div>
+
+                            <div className={styles.remember}><Checkbox style={{color: '#0B4068', }}/>Keep me logged in</div>
 
                             <br />
-                            <Button color="primary" variant="contained" /*onClick={() => handleSubmit(title, message)}*/>
-                                Log In
-                            </Button>
+                            <Button 
+                            style={{backgroundColor: '#0B4068', color: '#FFFFFF', width: '160px'}}
+                            >Log IN</Button>
                         </div>
                     </div>
                 </Grid>
