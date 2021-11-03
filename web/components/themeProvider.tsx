@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState, useContext } from 'react'
-import { palette } from './palette'
+import palette from '../utils/palette'
 
 type ThemeName = 'light' | 'dark'
 

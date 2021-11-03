@@ -1,4 +1,4 @@
-export const palette = {
+const palette = {
     light: {
         tp: '#000',
         ts: '#373737',
@@ -14,3 +14,5 @@ export const palette = {
         bg_3: '#111',
     },
 }
+
+export default palette
