@@ -1,24 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
-import EditorText from '../components/EditorText'
-import langModeMapper from '../utils/langModeMapper'
-import PhotoHandler from '../utils/photoHandler'
-import { View } from '../components/Themed'
+import { Text, View } from '../components/Themed'
+import { TextInput } from 'react-native-gesture-handler'
+import { Picker } from '@react-native-picker/picker'
 
 const Editor = () => {
     const [code, setCode] = useState('')
     const [output, setOutput] = useState('')
     const [lang, setLang] = useState('cpp')
-
-    useEffect(() => {
-        try {
-            axios.get(`/code`).then(function (response) {
-                setCode(response.data.code)
-            })
-        } catch (err) {
-            console.log(err)
-        }
-    }, [])
 
     const handleSubmit = async () => {
         const payload = JSON.stringify({
@@ -27,13 +16,14 @@ const Editor = () => {
         })
 
         try {
-            const { data } = await axios.post(`/run`, payload, {
+            const { data } = await axios.post('http://localhost:8080/run', payload, {
                 headers: { 'Content-Type': 'application/json' },
             })
             setOutput(data.output)
         } catch ({ response }) {
             if (response) {
-                setOutput('Compilation Error')
+                const errMsg = response.data.err.stderr
+                setOutput(errMsg)
             } else {
                 setOutput('Error connecting to server!')
             }
@@ -42,14 +32,24 @@ const Editor = () => {
 
     return (
         <View>
+            <TextInput
+                style={{ height: '20rem', color: '#fff' }}
+                multiline={true}
+                numberOfLines={4}
+                value={code}
+                onChangeText={code => setCode(code)}
+            />
+
             <View>
-                <EditorText props={{ mode: langModeMapper[lang] }} code={code} setCode={setCode} />
+                <Picker selectedValue={lang} onValueChange={(value, index) => setLang(value)} mode="dropdown">
+                    <Picker.Item label="C++" value="cpp" />
+                    <Picker.Item label="Python" value="py" />
+                </Picker>
             </View>
-
-            <br />
-            <PhotoHandler lang={lang} setLang={setLang} handleSubmit={handleSubmit} />
-
-            <View>{output}</View>
+            <button onClick={handleSubmit}>
+                <Text style={{ color: '#000' }}>Submit</Text>
+            </button>
+            <Text>{output}</Text>
         </View>
     )
 }

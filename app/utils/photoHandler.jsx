@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { Component } from 'react'
+import { View } from '../components/Themed'
 
 class PhotoHandler extends Component {
     state = {
@@ -28,7 +29,7 @@ class PhotoHandler extends Component {
         fileData = () => {
             if (this.state.selectedFile) {
                 return (
-                    <div>
+                    <View>
                         <h2>File Details:</h2>
 
                         <p>File Name: {this.state.selectedFile.name}</p>
@@ -36,7 +37,7 @@ class PhotoHandler extends Component {
                         <p>File Type: {this.state.selectedFile.type}</p>
 
                         <p>Last Modified: {this.state.selectedFile.lastModifiedDate.toDateString()}</p>
-                    </div>
+                    </View>
                 )
             } else {
                 return 'Choose before pressing the upload button'
@@ -46,22 +47,19 @@ class PhotoHandler extends Component {
 
     render() {
         return (
-            <>
-                <div className={styles.action_area}>
-                    <div>
-                        <label className={styles.label_styles} htmlFor="code-file">
-                            Choose File{' '}
-                        </label>
-                        <input id="code-file" className={styles.input_styles} type="file" onChange={this.onFileChange} name="photo" />
-                        <button darkText={true} onClick={this.onFileUpload} className={styles.btnSuccess}>
+            <View>
+                <View>
+                    <View>
+                        <label htmlFor="code-file">Choose File </label>
+                        <input id="code-file" type="file" onChange={this.onFileChange} name="photo" />
+                        <button darkText={true} onClick={this.onFileUpload}>
                             {' '}
                             🦄 Upload!
                         </button>
-                    </div>
+                    </View>
                     <select
                         id="selector"
                         value={this.props.lang}
-                        className={styles.lang_selector}
                         onChange={e => {
                             this.props.setLang(e.target.value)
                             console.log(e.target.value)
@@ -70,13 +68,10 @@ class PhotoHandler extends Component {
                         <option value="cpp">C++</option>
                         <option value="py">Python</option>
                     </select>
-                    <Btn darkText={true} handleClick={this.props.handleSubmit}>
-                        {' '}
-                        🐥 Submit
-                    </Btn>
-                </div>
-                <p className="description mt1">{this.fileData()}</p>
-            </>
+                    <Btn handleClick={this.props.handleSubmit}> 🐥 Submit</Btn>
+                </View>
+                <Text>{this.fileData()}</Text>
+            </View>
         )
     }
 }
