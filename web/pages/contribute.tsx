@@ -1,13 +1,13 @@
 import React from 'react'
 import { Grid, Button, TextField } from '@material-ui/core'
-import styles from '../styles/Admin.module.scss'
+import styles from '../styles/Contribute.module.scss'
 import Head from 'next/head'
 
-const Admin = () => {
+const Contribute = () => {
     return (
         <>
             <Head>
-                <title>Drona | Admin Login</title>
+                <title>Drona | Contribute</title>
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="apple-touch-icon" href="/256x256.png"></link>
                 <meta name="theme-color" content="#fff" />
@@ -18,7 +18,7 @@ const Admin = () => {
                 <Grid container className={styles.card}>
                     <Grid item xs={12} sm={12} md={7}>
                         <img
-                            src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635971918/login-drona_ae2rap.png"
+                            src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635971918/contribute-img-drona_hjcqbi.png"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                     </Grid>
@@ -26,12 +26,12 @@ const Admin = () => {
                         <div className={styles.form}>
                             <div className={styles.name}>DRONA</div>
 
-                            <div className={styles.heading}>Log in to your account</div>
+                            <div className={styles.heading}>Be the senior you wanted as a junior</div>
 
                             <TextField
                                 id="outlined-basic"
                                 variant="outlined"
-                                label="Email address"
+                                label="Title"
                                 margin="normal"
                                 type="email"
                                 className={styles.formText}
@@ -40,15 +40,16 @@ const Admin = () => {
 
                             <TextField
                                 id="outlined-basic"
+                                multiline
                                 variant="outlined"
-                                label="Password"
+                                label="Problem Statement"
                                 margin="normal"
-                                type="password"
+                                type="email"
                                 className={styles.formText}
                                 // onChange={e => setTitle(e.target.value)}
                             />
                             <br />
-                            <Button style={{ backgroundColor: '#000', color: '#FFFFFF', fontWeight: 800 }}>Log In</Button>
+                            <Button style={{ backgroundColor: '#000', color: '#FFFFFF', fontWeight: 800 }}>Submit</Button>
                         </div>
                     </Grid>
                 </Grid>
@@ -57,4 +58,4 @@ const Admin = () => {
     )
 }
 
-export default Admin
+export default Contribute
