@@ -11,7 +11,7 @@ import CompilerScreen from '../screens/CompilerScreen'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import Home from '../screens/Home'
 import Opportunities from '../screens/Opportunities'
-import Questionnaire from '../screens/Questionnaire'
+import Questionnaire from '../screens/Questionnare'
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types'
 import LinkingConfiguration from './LinkingConfiguration'
 

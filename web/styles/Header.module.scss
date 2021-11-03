@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    background-color: var(--bg-1);
+    padding: 0 2em;
+    height: 60px;
+    margin-top: 2em;
+    position: relative;
+}
+
+.toggler {
+    height: 100%;
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+
+@media screen and (max-width:600px) {
+    .nav{
+        width: 95%;
+    }
+}
