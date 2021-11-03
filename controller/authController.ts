@@ -1,17 +1,14 @@
 import express, { Request, Response, NextFunction } from 'express'
 import bcrypt from 'bcrypt'
 import bcp from '../config/bcrypt'
-import log from '../log'
 import jwt from 'jsonwebtoken'
 
 var router = express.Router()
-var ObjectId = require('mongoose').Types.ObjectId
 var User = require('../models/user')
 
 router.post('/register', async (req: Request, res: Response) => {
-    console.log(req.body)
     try {
-        const newPassword = await bcrypt.hash(req.body.password, 10)
+        const newPassword = await bcrypt.hash(req.body.password, bcp.salt)
         await User.create({
             email: req.body.email,
             password: newPassword,
@@ -39,7 +36,7 @@ router.post('/login', async (req: Request, res: Response) => {
                 name: user.name,
                 email: user.email,
             },
-            'secret123'
+            bcp.secret
         )
 
         return res.json({ status: 'ok', user: token })
