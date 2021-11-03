@@ -5,11 +5,14 @@ import { useTheme } from './themeProvider'
 import Link from 'next/link'
 
 const Navbar = () => {
-    // const { theme, setTheme } = useTheme()
+    const {theme, setTheme} = useTheme();
+    
+    const handleChange = () => {
+        setTheme(theme === 'dark' ? 'light' : 'dark')
+    }
 
-    // const handleChange = () => {
-    //     setTheme(theme === 'dark' ? 'light' : 'dark')
-    // }
+
+
     return (
         <nav className={styles.nav}>
             <p id="logo">
@@ -20,7 +23,7 @@ const Navbar = () => {
 
             <ul className="fr">
                 <li className={`ml1 ${styles.toggler} show-small-devices`}>
-                    {/* <DarkModeSwitch checked={theme == 'dark'} onChange={handleChange} size={28} /> */}
+                    <DarkModeSwitch checked={theme == 'dark'} onChange={handleChange} size={28} />
                 </li>
             </ul>
         </nav>

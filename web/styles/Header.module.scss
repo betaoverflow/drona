@@ -5,8 +5,7 @@
     align-items: center;
     width: 80%;
     margin: auto;
-    // background-color: var(--bg-1);
-    background-color: #fff;
+    background-color: var(--bg-1);
     padding: 0 2em;
     height: 60px;
     margin-top: 2em;
@@ -20,8 +19,8 @@
     top: 25%;
 }
 
-@media screen and (max-width: 600px) {
-    .nav {
+@media screen and (max-width:600px) {
+    .nav{
         width: 95%;
     }
 }
