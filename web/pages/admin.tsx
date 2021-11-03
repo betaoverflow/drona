@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Button, TextField } from '@material-ui/core'
-import styles from '../styles/Admin.module.scss'
+import styles from '../styles/admin.module.scss'
 import Head from 'next/head'
 
 const Admin = () => {
