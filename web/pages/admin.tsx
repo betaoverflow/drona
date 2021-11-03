@@ -15,19 +15,19 @@ const Admin = () => {
                     />
                 </Grid>
                 <Grid container item xs={12} sm={6} alignItems="center" direction="column" style={{ padding: 10 }}>
-                    <div className={styles.form}>
+                    <div  className={styles.form}>
                         <div
                             style={{
                                 display: 'flex',
                                 flexDirection: 'column',
                             }}
-                        >
+                            >
                             <div className={styles.name}>DRONA</div>
 
                             <div className={styles.heading}>Log in to your account</div>
                             
                             {/* <div className={styles.login}>Email Address</div> */}
-
+                            
                             <TextField 
                             id="outlined-basic" 
                             variant="outlined" 
@@ -44,14 +44,15 @@ const Admin = () => {
                             variant="outlined" 
                             label="Password"
                             margin="normal"
-                            type="email"
+                            type="password"
                             className={styles.formText}
                             // onChange={e => setTitle(e.target.value)}
                             />
 
                             <div className={styles.remember}><Checkbox style={{color: '#0B4068', }}/>Keep me logged in</div>
-
+                            
                             <br />
+
                             <Button 
                             style={{backgroundColor: '#0B4068', color: '#FFFFFF', width: '160px'}}
                             >Log IN</Button>
