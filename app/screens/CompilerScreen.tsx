@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Text, View } from '../components/Themed'
 import { TextInput } from 'react-native-gesture-handler'
 import { Picker } from '@react-native-picker/picker'
+import { Button } from 'react-native'
 
 const Editor = () => {
     const [code, setCode] = useState('')
@@ -32,13 +33,7 @@ const Editor = () => {
 
     return (
         <View>
-            <TextInput
-                style={{ height: '20rem', color: '#fff' }}
-                multiline={true}
-                numberOfLines={4}
-                value={code}
-                onChangeText={code => setCode(code)}
-            />
+            <TextInput style={{ color: '#232323' }} multiline={true} numberOfLines={4} value={code} onChangeText={code => setCode(code)} />
 
             <View>
                 <Picker selectedValue={lang} onValueChange={(value, index) => setLang(value)} mode="dropdown">
@@ -46,9 +41,10 @@ const Editor = () => {
                     <Picker.Item label="Python" value="py" />
                 </Picker>
             </View>
-            <button onClick={handleSubmit}>
+            <Button onPress={handleSubmit} title="Submit" />
+            {/* <button onClick={handleSubmit}>
                 <Text style={{ color: '#000' }}>Submit</Text>
-            </button>
+            </button> */}
             <Text>{output}</Text>
         </View>
     )
