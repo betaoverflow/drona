@@ -1,13 +1,10 @@
 import React from 'react'
-// import { Button, Heading, Subheading, Number, Container, ContainerRow, ContainerCol, Image } from '../components/404styles'
-import link from 'next/link'
+import { Button, Heading, Subheading, Number, Container, ContainerRow, ContainerCol, Image } from '../components/404styles'
+import Link from 'next/link'
 export default function Custom404() {
     return (
         <>
-            <div>
-                <h1>404</h1>
-            </div>
-            {/* <Container>
+            <Container>
                 <ContainerCol>
                     <Subheading>Oops, something went wrong, but</Subheading>
                     <Heading>DONUT WORRY</Heading>
@@ -22,10 +19,10 @@ export default function Custom404() {
                 <ContainerCol>
                     <Subheading>It will be fixed soon</Subheading>
                     <Button>
-                        <link href="/">Go Back</link>
+                        <Link href="/">Go Back</Link>
                     </Button>
                 </ContainerCol>
-            </Container> */}
+            </Container>
         </>
     )
 }
