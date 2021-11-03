@@ -1,78 +1,48 @@
-import { Request, Response } from 'express'
-import crypto from 'crypto'
+import express, { Request, Response, NextFunction } from 'express'
 import bcrypt from 'bcrypt'
+import bcp from '../config/bcrypt'
+import jwt from 'jsonwebtoken'
 
-import Admin from '../models/admin'
-import bcryptConfig from '../config/bcrypt'
+var router = express.Router()
+var User = require('../models/user')
 
-const adminController = {
-    create: async (req: Request, res: Response) => {
-        try {
-            const { name, email, password: passwordBody } = req.body
+router.post('/register', async (req: Request, res: Response) => {
+    try {
+        const newPassword = await bcrypt.hash(req.body.password, bcp.salt)
+        await User.create({
+            email: req.body.email,
+            password: newPassword,
+        })
+        res.json({ status: 'ok' })
+    } catch (err) {
+        res.json({ status: 'error', error: err })
+    }
+})
 
-            if (!name || !email || !passwordBody) return res.status(400).json({ message: 'Missing data' })
+router.post('/login', async (req: Request, res: Response) => {
+    const user = await User.findOne({
+        email: req.body.email,
+    })
 
-            const isAdminExists = await Admin.findOne({ email }).exec()
+    if (!user) {
+        return { status: 'error', error: 'Invalid login' }
+    }
 
-            if (isAdminExists) return res.status(401).json({ message: 'Admin Already Exists' })
+    const isPasswordValid = await bcrypt.compare(req.body.password, user.password)
 
-            const password = await bcrypt.hash(passwordBody, bcryptConfig.salt)
-            const access_token = crypto.randomBytes(30).toString('hex')
+    if (isPasswordValid) {
+        const token = jwt.sign(
+            {
+                name: user.name,
+                email: user.email,
+            },
+            bcp.secret
+        )
 
-            const newAdmin = await new Admin({
-                name,
-                email,
-                password,
-                access_token,
-            }).save()
+        return res.json({ status: 'ok', user: token })
+    } else {
+        return res.json({ status: 'error', user: false })
+    }
+})
 
-            return res.status(201).json(newAdmin)
-        } catch (err) {
-            return res.status(500).json({ message: 'Internal Server Error' })
-        }
-    },
-
-    login: async (req: Request, res: Response) => {
-        try {
-            const { email, password } = req.body
-
-            if (!email || !password) return res.status(400).json({ message: 'Missing Data' })
-
-            const admin = await Admin.findOne({ email }).exec()
-
-            if (!admin) return res.status(401).json({ message: 'Email or Password is Wrong!' })
-
-            const isPasswordValid = await bcrypt.compare(password, admin.password)
-
-            if (!isPasswordValid) return res.status(401).json({ message: 'Email or Password is Wrong!' })
-
-            return res.status(200).json({
-                _id: admin._id,
-                name: admin.name,
-                email: admin.email,
-                access_token: admin.access_token,
-            })
-        } catch (err) {
-            return res.status(500).json({ message: 'Internal Server Error' })
-        }
-    },
-
-    select: async (req: Request, res: Response) => {
-        try {
-            const { id: _id } = req.params
-            const noSelect = ['-password', '-email', '-access_token']
-
-            if (_id) {
-                const admin = await Admin.findOne({ _id }, noSelect).exec()
-                return res.status(200).json(admin)
-            } else {
-                const admins = await Admin.find({}, noSelect).exec()
-                return res.status(200).json(admins)
-            }
-        } catch (err) {
-            return res.status(500).json({ message: 'Internal Server Error' })
-        }
-    },
-}
-
-export default adminController
+module.exports = router
