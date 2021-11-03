@@ -42,9 +42,6 @@ const Editor = () => {
                 </Picker>
             </View>
             <Button onPress={handleSubmit} title="Submit" />
-            {/* <button onClick={handleSubmit}>
-                <Text style={{ color: '#000' }}>Submit</Text>
-            </button> */}
             <Text>{output}</Text>
         </View>
     )
