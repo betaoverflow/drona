@@ -13,12 +13,10 @@ async function handleSubmit(title: string, message: string) {
         const data = await axios.post(`http://localhost:8080/api/questions`, payload, {
             headers: { 'Content-Type': 'application/json' },
         })
-        alert('Question added')
-        window.location.href = '/'
-        console.log(data)
+        window.location.href = '/contribute'
+        console.log(data, 'Question has been added')
     } catch (error) {
-        alert('Error while adding question to database')
-        console.log(error)
+        console.log('Error while adding question to database' + error)
     }
 }
 

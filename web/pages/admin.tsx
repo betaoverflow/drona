@@ -3,13 +3,8 @@ import { Grid, Button, TextField } from '@material-ui/core'
 import styles from '../styles/admin.module.scss'
 import Head from 'next/head'
 
-const Admin = () => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-
-    async function loginUser(event) {
-        event.preventDefault()
-
+async function loginUser(email: string, password: string) {
+    try {
         const response = await fetch('http://localhost:8080/auth/login', {
             method: 'POST',
             headers: {
@@ -25,12 +20,18 @@ const Admin = () => {
 
         if (data.user) {
             localStorage.setItem('token', data.user)
-            alert('Login successful')
             window.location.href = '/dashboard'
         } else {
-            alert('Please check your username and password')
+            console.log('Error: Please check your username and password')
         }
+    } catch (error) {
+        console.log('Error: Please check your username and password')
     }
+}
+
+const Admin = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     return (
         <>
@@ -55,33 +56,34 @@ const Admin = () => {
                             <div className={styles.name}>DRONA</div>
 
                             <div className={styles.heading}>Log in to your account</div>
-                            <form onSubmit={loginUser}>
-                                <TextField
-                                    id="outlined-basic"
-                                    variant="outlined"
-                                    label="Email address"
-                                    margin="normal"
-                                    type="email"
-                                    className={styles.formText}
-                                    value={email}
-                                    onChange={e => setEmail(e.target.value)}
-                                />
+                            <TextField
+                                id="outlined-basic"
+                                variant="outlined"
+                                label="Email address"
+                                margin="normal"
+                                type="email"
+                                className={styles.formText}
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                            />
 
-                                <TextField
-                                    id="outlined-basic"
-                                    variant="outlined"
-                                    label="Password"
-                                    margin="normal"
-                                    type="password"
-                                    className={styles.formText}
-                                    value={password}
-                                    onChange={e => setPassword(e.target.value)}
-                                />
-                                <br />
-                                <Button style={{ backgroundColor: '#000', color: '#FFFFFF', fontWeight: 800 }} type="submit">
-                                    Log In
-                                </Button>
-                            </form>
+                            <TextField
+                                id="outlined-basic"
+                                variant="outlined"
+                                label="Password"
+                                margin="normal"
+                                type="password"
+                                className={styles.formText}
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                            />
+                            <br />
+                            <Button
+                                style={{ backgroundColor: '#000', color: '#FFFFFF', fontWeight: 800 }}
+                                onClick={() => loginUser(email, password)}
+                            >
+                                Log In
+                            </Button>
                         </div>
                     </Grid>
                 </Grid>
