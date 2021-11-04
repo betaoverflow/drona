@@ -1,60 +1,54 @@
-import React from 'react';
-import Aboutcarddata from './Aboutcarddata';
-import styles from '../../styles/about.module.scss';
+import React from 'react'
+import styles from '../../styles/about.module.scss'
 
-const Aboutcard = (props) => {
-    return(
+const Aboutcard = (props: any) => {
+    return (
         <div className={styles.aboutcard}>
             <div className={styles.cardtext}>
                 <div className={styles.cardheading}>{props.Heading}</div>
                 <div className={styles.cardsubheading}>{props.Subheading}</div>
             </div>
-            <div className={styles.logo}>
-                <img className={styles.cardlogo} src={props.logo} />
-            </div>
+            <div className={styles.logo}>{props.logo}</div>
         </div>
     )
 }
 
-const Aboutcarddata=[
+const Aboutcarddata = [
     {
-        Heading:"Run Your Hand-Written Code",
-        Subheading:"Run your hand-written code and code on your phone in three clicks",
-        logo: "https://res.cloudinary.com/dguy8qpzi/image/upload/v1635602419/test_el7hyk.svg",
+        id: 1,
+        Heading: 'Run Your Hand-Written Code',
+        Subheading: 'Run your hand-written code and code on your phone in three clicks',
+        logo: 'logo',
     },
 
     {
-        Heading:"Practice from unlimited questions.",
-        Subheading:"Run your hand-written code and code on your phone in three clicks",
-        logo: "https://res.cloudinary.com/dguy8qpzi/image/upload/v1635602419/test_el7hyk.svg",
+        id: 2,
+        Heading: 'Practice from unlimited questions.',
+        Subheading: 'Run your hand-written code and code on your phone in three clicks',
+        logo: 'logo',
     },
 
     {
-        Heading:"Get constant updates",
-        Subheading:"Run your hand-written code and code on your phone in three clicks",
-        logo: "https://res.cloudinary.com/dguy8qpzi/image/upload/v1635602419/test_el7hyk.svg",
+        id: 3,
+        Heading: 'Get constant updates',
+        Subheading: 'Run your hand-written code and code on your phone in three clicks',
+        logo: 'logo',
     },
 ]
 
 const About = () => {
-    return(
+    return (
         <>
-        <div className={styles.about}>
-            <div className={styles.heading}>What it does</div>
-            <div className={styles.aboutcards}>
-                {Aboutcarddata.map(function ncards(val){
-                return(
-                    <Aboutcard
-                    Heading={val.Heading}
-                    Subheading={val.Subheading}
-                    logo={val.logo}
-                    />
-                );
-                })}
+            <div className={styles.about}>
+                <div className={styles.heading}>What it does</div>
+                <div className={styles.aboutcards}>
+                    {Aboutcarddata.map(function ncards(val) {
+                        return <Aboutcard key={val.id} Heading={val.Heading} Subheading={val.Subheading} logo={val.logo} />
+                    })}
+                </div>
             </div>
-        </div>
         </>
     )
 }
 
-export default About;
+export default About
