@@ -1,11 +1,14 @@
 import * as React from 'react'
-import { StyleSheet } from 'react-native'
+import { TouchableOpacity, StyleSheet, Linking } from 'react-native'
 import ConfirmedQuestions from '../components/ConfirmedQuestions'
 import { Text, View } from '../components/Themed'
 
 export default function TabTwoScreen() {
     return (
         <View style={styles.container}>
+            <TouchableOpacity style={styles.button} onPress={() => Linking.openURL('https://drona-drab.vercel.app/contribute')}>
+                <Text style={styles.title}>CONTRIBUTE</Text>
+            </TouchableOpacity>
             <ConfirmedQuestions />
         </View>
     )
@@ -18,7 +21,15 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     title: {
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: 'bold',
     },
+    button:{
+        backgroundColor:'#0B4068',
+        padding:15,
+        marginTop:20,
+        width:"80%",
+        borderRadius:20,
+        alignItems:"center",
+    }
 })
