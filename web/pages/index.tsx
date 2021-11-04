@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import Footer from '../components/home/footer'
 import Hero from '../components/home/hero'
 import Navbar from '../components/Navbar'
+import About from '../components/home/About'
 import { ThemeProvider } from '../components/themeProvider'
 import styles from '../styles/Home.module.scss'
 
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
                 </Head>
                 <Header />
                 <Hero />
+                <About/>
                 <Footer />
                 <main className={styles.main}></main>
             </div>
