@@ -1,0 +1,15 @@
+.mainImage {
+    margin-top: 10%;
+    width: 90%;
+}
+
+.heading {
+    margin-top: 40%;
+    font-size: 3.5rem;
+}
+
+@media (max-width: 959px) {
+    .heading {
+        margin-top: 10%;
+    }
+}
