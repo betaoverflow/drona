@@ -18,8 +18,8 @@ const Editor = () => {
         
         // Send image file to OCR and get result
         if (filepath) {
-            getTextFromMaxOcr(filepath!);
-    
+            const res = await getTextFromMaxOcr(filepath!);
+            console.log('res ', res);
             // const payload = JSON.stringify({
             //     lang: lang,
             //     code,

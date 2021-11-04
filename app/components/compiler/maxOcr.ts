@@ -1,7 +1,7 @@
 import { MAX_OCR_ADDRESS } from "../constants/maxOcrAddress"
 import RNFetchBlob from "rn-fetch-blob";
 
-const textFromArray = (inp: any) => {
+const textFromArray: (inp: [string[]]) => string = (inp) => {
     let res = "";
     for (let i = 0; i < inp.length; i++) {
         res += inp[i] + '\n';
@@ -19,8 +19,9 @@ export const getTextFromMaxOcr = async (filepath: string) => {
         ])
 
         const ans = JSON.parse(res.data);
-        console.log(textFromArray(ans.text));
-
+        
+        const code = textFromArray(ans.text);
+        return code;
 
     } catch(e) {
         console.log(e, ' error sending model data to ocr');
