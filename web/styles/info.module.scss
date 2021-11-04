@@ -1,0 +1,55 @@
+.info{
+    width: 100%;
+    height: 60vh;
+    background-color: #0B4068;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoheading{
+    font-family: sans-serif;
+    font-size: 60px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.infocards{
+    display: flex;
+    height: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cardheading{
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 1rem;
+}
+
+.cardsubheading{
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 1rem;
+}
+
+@media(max-width: 850px){
+    .info{
+        width: 100%;
+        height: fit-content;
+    }
+    .infocards{
+        flex-direction: column;
+    }
+
+    .infocard{
+        padding: 1rem;
+    }
+
+    .infoheading{
+        font-family: sans-serif;
+        font-size: 50px;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
