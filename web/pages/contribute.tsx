@@ -1,42 +1,32 @@
 import React, { useState } from 'react'
-import { Grid, Button, TextField } from '@material-ui/core'
-import styles from '../styles/admin.module.scss'
+import { Grid, Button, TextField } from '@material-ui/core/'
+import styles from '../styles/Contribute.module.scss'
 import Head from 'next/head'
+import axios from 'axios'
 
-async function loginUser(email: string, password: string) {
+async function handleSubmit(title: string, message: string) {
+    const payload = JSON.stringify({
+        title: title,
+        message: message,
+    })
     try {
-        const response = await fetch('http://localhost:8080/auth/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email,
-                password,
-            }),
+        const data = await axios.post(`http://localhost:8080/api/questions`, payload, {
+            headers: { 'Content-Type': 'application/json' },
         })
-
-        const data = await response.json()
-
-        if (data.user) {
-            localStorage.setItem('token', data.user)
-            window.location.href = '/dashboard'
-        } else {
-            console.log('Error: Please check your username and password')
-        }
+        window.location.href = '/contribute'
+        console.log(data, 'Question has been added')
     } catch (error) {
-        console.log('Error: Please check your username and password')
+        console.log('Error while adding question to database' + error)
     }
 }
 
-const Admin = () => {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-
+const Contribute = () => {
+    const [title, setTitle] = useState('')
+    const [message, setMessage] = useState('')
     return (
         <>
             <Head>
-                <title>Drona | Admin Login</title>
+                <title>Drona | Contribute</title>
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="apple-touch-icon" href="/256x256.png"></link>
                 <meta name="theme-color" content="#fff" />
@@ -47,7 +37,7 @@ const Admin = () => {
                 <Grid container className={styles.card}>
                     <Grid item xs={12} sm={12} md={7}>
                         <img
-                            src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635971918/login-drona_ae2rap.png"
+                            src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635971918/contribute-img-drona_hjcqbi.png"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                     </Grid>
@@ -55,34 +45,34 @@ const Admin = () => {
                         <div className={styles.form}>
                             <div className={styles.name}>DRONA</div>
 
-                            <div className={styles.heading}>Log in to your account</div>
-                            <TextField
-                                id="outlined-basic"
-                                variant="outlined"
-                                label="Email address"
-                                margin="normal"
-                                type="email"
-                                className={styles.formText}
-                                value={email}
-                                onChange={e => setEmail(e.target.value)}
-                            />
+                            <div className={styles.heading}>Be the senior you wanted as a junior</div>
 
                             <TextField
                                 id="outlined-basic"
                                 variant="outlined"
-                                label="Password"
+                                label="Title"
                                 margin="normal"
-                                type="password"
+                                type="string"
                                 className={styles.formText}
-                                value={password}
-                                onChange={e => setPassword(e.target.value)}
+                                onChange={e => setTitle(e.target.value)}
+                            />
+
+                            <TextField
+                                id="outlined-basic"
+                                multiline
+                                variant="outlined"
+                                label="Problem Statement"
+                                margin="normal"
+                                type="string"
+                                className={styles.formText}
+                                onChange={e => setMessage(e.target.value)}
                             />
                             <br />
                             <Button
                                 style={{ backgroundColor: '#000', color: '#FFFFFF', fontWeight: 800 }}
-                                onClick={() => loginUser(email, password)}
+                                onClick={() => handleSubmit(title, message)}
                             >
-                                Log In
+                                Submit
                             </Button>
                         </div>
                     </Grid>
@@ -92,4 +82,4 @@ const Admin = () => {
     )
 }
 
-export default Admin
+export default Contribute
