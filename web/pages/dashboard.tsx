@@ -3,12 +3,11 @@ import styles from '../styles/Dashboard.module.scss'
 import axios from 'axios'
 import Head from 'next/head'
 
-function toApprove(id) {
+function toApprove(id: any) {
     try {
         axios.put(`http://localhost:8080/api/questions/moderator/${id}`, { isApproved: 'true' }).then(function (response) {
             // handle success
             console.log(response)
-            window.location = `/`
         })
     } catch (err) {
         console.log(err)
@@ -16,22 +15,27 @@ function toApprove(id) {
 }
 
 function Contribute() {
-    const [questions, setQuestions] = useState([])
+    const [questions, setQuestions] = useState<any[]>([])
 
     useEffect(() => {
-        try {
-            axios.get(`http://localhost:8080/api/questions`).then(function (response) {
-                // handle success
-                setQuestions(response.data)
-            })
-        } catch (err) {
-            console.log(err)
+        if (localStorage.getItem('token')) {
+            try {
+                axios.get(`http://localhost:8080/api/questions`).then(function (response) {
+                    // handle success
+                    setQuestions(response.data)
+                })
+            } catch (err) {
+                console.log(err)
+            }
+        } else {
+            alert("You're not logged in.")
+            window.location.href = '/admin'
         }
     }, [])
     return (
         <>
             <Head>
-                <title>Drona | Admin Login</title>
+                <title>Drona | Dashboard</title>
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="apple-touch-icon" href="/256x256.png"></link>
                 <meta name="theme-color" content="#fff" />
@@ -42,7 +46,7 @@ function Contribute() {
                 {questions.map(question => {
                     return (
                         <div key={question._id}>
-                            <article className={styles.question} style={{ height: '250px' }}>
+                            <article className={styles.question} style={{ height: '250px', textAlign: 'center' }}>
                                 <div key={question._id} className={styles.questionContent}>
                                     <h1 className={styles.questionTitle} key={question._id}>
                                         {question.title}
@@ -51,12 +55,9 @@ function Contribute() {
                                     <p className={styles.questionMessage}>{question.message}</p>
                                     <br />
                                     {question.isApproved ? (
-                                        <button className={styles.btnSuccess} darkText={true}>
-                                            {' '}
-                                            ✅ Approved
-                                        </button>
+                                        <button className={styles.btnSuccess}> ✅ Approved</button>
                                     ) : (
-                                        <button className={styles.btnDanger} darkText={true} onClick={() => toApprove(question._id)}>
+                                        <button className={styles.btnDanger} onClick={() => toApprove(question._id)}>
                                             {' '}
                                             🙋🏻 Approve
                                         </button>
