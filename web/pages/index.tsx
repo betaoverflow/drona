@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Header from '../components/Header'
+import Hero from '../components/home/hero'
 import Navbar from '../components/Navbar'
 import { ThemeProvider } from '../components/themeProvider'
 import styles from '../styles/Home.module.scss'
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
                     <link rel="icon" href="/256x256.png" />
                 </Head>
                 <Header />
+                <Hero />
                 <main className={styles.main}></main>
             </div>
         </ThemeProvider>
