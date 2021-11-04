@@ -6,7 +6,6 @@ import { Picker } from '@react-native-picker/picker'
 import { Button } from 'react-native'
 import {CameraOptions, launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import { getTextFromMaxOcr } from '../components/compiler/maxOcr'
-import { readFile } from 'react-native-fs'
 
 const Editor = () => {
     const [code, setCode] = useState('')
@@ -15,30 +14,21 @@ const Editor = () => {
     const [filepath, setFilepath] = useState(undefined)
 
     const handleSubmit = async () => {
-        
         // Send image file to OCR and get result
-        if (filepath) {
-            const res = await getTextFromMaxOcr(filepath!);
-            console.log('res ', res);
-            // const payload = JSON.stringify({
-            //     lang: lang,
-            //     code,
-            // })
-    
-            // try {
-            //     const { data } = await axios.post('http://localhost:8080/run', payload, {
-            //         headers: { 'Content-Type': 'application/json' },
-            //     })
-            //     setOutput(data.output)
-            // } catch ({ response }) {
-            //     if (response) {
-            //         const errMsg = response.data.err.stderr
-            //         setOutput(errMsg)
-            //     } else {
-            //         setOutput('Error connecting to server!')
-            //     }
-            // }
+        const payload = {
+            lang,
+            code,
         }
+
+        const codeRes = await axios({
+            url: 'https://playground-betaoverflow-2.herokuapp.com/run',
+            method: 'POST',
+            data: payload,
+        })
+
+        const OutputLocal = codeRes.data.output;
+
+        setOutput(OutputLocal!);
     }
 
     const cameraOptions:CameraOptions = {
@@ -46,7 +36,7 @@ const Editor = () => {
         mediaType: 'photo',
     }
 
-    const imgCallback = (res: any) => {
+    const imgCallback = async (res: any) => {
         console.log(res);
         if ('didCancel' in res) {
             console.log('cancelled by user');
@@ -55,7 +45,11 @@ const Editor = () => {
         } else if ('errorMessage' in res) {
             console.log(res.errorMessage);
         } else {
-            setFilepath(res.assets[0].uri);
+            const filepathLocal = res.assets[0].uri;
+            
+            const codeFromOcr = await getTextFromMaxOcr(filepathLocal!);
+            setFilepath(filepathLocal);
+            setCode(codeFromOcr!);
         }
     }
 
