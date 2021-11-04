@@ -1,9 +1,30 @@
-import React from 'react'
-import { Grid, Button, TextField } from '@material-ui/core'
+import React, { useState } from 'react'
+import { Grid, Button, TextField } from '@material-ui/core/'
 import styles from '../styles/Contribute.module.scss'
 import Head from 'next/head'
+import axios from 'axios'
+
+async function handleSubmit(title: string, message: string) {
+    const payload = JSON.stringify({
+        title: title,
+        message: message,
+    })
+    try {
+        const data = await axios.post(`http://localhost:8080/api/questions`, payload, {
+            headers: { 'Content-Type': 'application/json' },
+        })
+        alert('Question added')
+        window.location.href = '/'
+        console.log(data)
+    } catch (error) {
+        alert('Error while adding question to database')
+        console.log(error)
+    }
+}
 
 const Contribute = () => {
+    const [title, setTitle] = useState('')
+    const [message, setMessage] = useState('')
     return (
         <>
             <Head>
@@ -33,9 +54,9 @@ const Contribute = () => {
                                 variant="outlined"
                                 label="Title"
                                 margin="normal"
-                                type="email"
+                                type="string"
                                 className={styles.formText}
-                                // onChange={e => setTitle(e.target.value)}
+                                onChange={e => setTitle(e.target.value)}
                             />
 
                             <TextField
@@ -44,12 +65,17 @@ const Contribute = () => {
                                 variant="outlined"
                                 label="Problem Statement"
                                 margin="normal"
-                                type="email"
+                                type="string"
                                 className={styles.formText}
-                                // onChange={e => setTitle(e.target.value)}
+                                onChange={e => setMessage(e.target.value)}
                             />
                             <br />
-                            <Button style={{ backgroundColor: '#000', color: '#FFFFFF', fontWeight: 800 }}>Submit</Button>
+                            <Button
+                                style={{ backgroundColor: '#000', color: '#FFFFFF', fontWeight: 800 }}
+                                onClick={() => handleSubmit(title, message)}
+                            >
+                                Submit
+                            </Button>
                         </div>
                     </Grid>
                 </Grid>
