@@ -8,7 +8,9 @@ const Aboutcard = (props: any) => {
                 <div className={styles.cardheading}>{props.Heading}</div>
                 <div className={styles.cardsubheading}>{props.Subheading}</div>
             </div>
-            <div className={styles.logo}>{props.logo}</div>
+            <div className={styles.logo}>
+                <img src={props.logo} />
+                </div>
         </div>
     )
 }
@@ -18,21 +20,21 @@ const Aboutcarddata = [
         id: 1,
         Heading: 'Run Your Hand-Written Code',
         Subheading: 'Run your hand-written code and code on your phone in three clicks',
-        logo: 'logo',
+        logo: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1636101907/test2_dw2nae.png',
     },
 
     {
         id: 2,
         Heading: 'Practice from unlimited questions.',
-        Subheading: 'Run your hand-written code and code on your phone in three clicks',
-        logo: 'logo',
+        Subheading: 'Practice from unlimited questions through crowdsourcing and our editor.',
+        logo: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1636101907/test2_dw2nae.png',
     },
 
     {
         id: 3,
         Heading: 'Get constant updates',
-        Subheading: 'Run your hand-written code and code on your phone in three clicks',
-        logo: 'logo',
+        Subheading: 'Get constant updates on internship, oss, placement, and other opportunities.',
+        logo: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1636101907/test2_dw2nae.png',
     },
 ]
 
