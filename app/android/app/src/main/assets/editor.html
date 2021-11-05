@@ -1,16 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <script type="module">
-    import {CodeJar} from 'https://medv.io/codejar/codejar.js'
-  </script>
-</head>
+<title>ACE in Action</title>
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 3em;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
+        font-size: 2em;
+    }
+
+    #lang_selector {
+        position: absolute;
+        top: 0.8em;
+        left: 2em;
+        background-color: black;
+        color: white;
+        z-index: 1;
+        border: none;
+        width: 180px;
+        height: 60px;
+        font-size: 1.4em;
+        border-radius: 12px;
+        padding: 0.5em;
+    }
+
+</style>
+</head>
 <body>
-  <h1>Code Jar</h1>
-  <div class="editor"></div>
-  <script>
-    let jar = CodeJar(document.querySelector('.editor'), Prism.highlightElement)
-  </script>
+
+<select onchange="handleLangChange()" id="lang_selector">
+    <option value="c_cpp">C++</option>
+    <option value="python">python</option>
+</select>    
+
+<div id="editor">
+    
+    function foo(items) {
+    var x = "All this is syntax highlighted";
+    return x;
+}</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ace.js" integrity="sha512-OMjy8oWtPbx9rJmoprdaQdS2rRovgTetHjiBf7RL7LvRSouoMLks5aIcgqHb6vGEAduuPdBTDCoztxLR+nv45g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://pagecdn.io/lib/ace/1.4.12/ace.min.js" crossorigin="anonymous" integrity="sha256-T5QdmsCQO5z8tBAXMrCZ4f3RX8wVdiA0Fu17FGnU1vU=" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ext-beautify.min.js" integrity="sha512-sIVPU3/0VPG2jJdl6NTqe8QF9vTE3Y/LAFiH2YPj8iCz5fdWkhOYA26QR6nZVjI3OWCMtbH/BX8YwZddZi8mhg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ext-code_lens.min.js" integrity="sha512-YAx61eq+qBHL0Ml+cW6Vz5nxLZ/WkTR1ohvh4skdkjMKQe8zWTts0klYTSbSQjORq+S+MfLMFnuCGBnpVxQbVA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ext-error_marker.min.js" integrity="sha512-4J/0fXV7jbSwrb4fio0hSnjUgwbQaznUWkeeV/MyVq5O+kFMPDmDOddUJz/Log6cGJ3sCMheo0gvrathVL6Ylg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ext-statusbar.min.js" integrity="sha512-6xzc62roG4ni9R6SvM6iYROWuUyYawrPNajsA3owkAIYcMn7dSZixscI6+AHmQZXlJ1Y9mz1t57RN/YBPAtXpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/javascript");
+
+    function handleLangChange() {
+        const lang = document.getElementById("lang_selector").value;
+        editor.session.setMode(`ace/mode/${lang}`);
+        window.ReactNativeWebView.postMessage(lang);
+    }
+
+    editor.getSession().on('change', function() {
+        const data = editor.getValue();
+        window.ReactNativeWebView.postMessage(data);
+    });
+
+</script>
 </body>
 </html>

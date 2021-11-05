@@ -37,9 +37,7 @@ function RootNavigator() {
         >
             <Stack.Screen name="DRONA" component={Home} />
             <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
-            <Stack.Group screenOptions={{ presentation: 'modal' }}>
-                <Stack.Screen name="Compiler" component={CompilerScreen} />
-            </Stack.Group>
+            <Stack.Screen name="Compiler" component={CompilerScreen} />
         </Stack.Navigator>
     )
 }
