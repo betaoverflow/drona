@@ -3,6 +3,7 @@ import Header from '../Header'
 import { ThemeProvider } from '../themeProvider'
 import About from './About'
 import Info from './info'
+import Compiler from './Compiler'
 import Features from './Features'
 import HomeContribute from './contribute'
 import Footer from './footer'
@@ -15,6 +16,7 @@ const HomeContainer: React.FC = () => {
             <Hero />
             <About />
             <Info/>
+            <Compiler/>
             <HomeContribute />
             <Features/>
             <Footer />
