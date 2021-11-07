@@ -46,7 +46,7 @@ const Featurescarddata = [
     },
 ]
 
-const Features = () => {
+const Features: React.FC = () => {
     return(
         <>
         <div className={styles.features} style={{color:"#fff"}}>
