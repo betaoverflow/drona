@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import { ListRenderItem } from 'react-native';
-import { FlatList } from 'react-native-gesture-handler';
+import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 
 import { Text, View } from '../components/Themed';
 import Opportunity from './opportunities/opportunity';
 import OpportunityType from './opportunities/opportunityType';
 import oppData from './opportunities/opporutnitiesData.json';
 import styled from '@emotion/native';
+
 
 const renderItem: ListRenderItem<OpportunityType> = ({item}) => (
   <Opportunity
@@ -28,7 +29,15 @@ export default function Opportunities() {
   const [opportunites, setOpportunities] = useState<OpportunityType[] | null>(oppData);
 
   return (
-    <View style = {{backgroundColor: 'black'}}>
+    <View style={{ backgroundColor: 'black' }}>
+      {/* Want to get update whenever we push a new oppurtunity? Click here */}
+      <TouchableOpacity
+         onPress={() => console.log("When clicked here get the option to login")}
+      >
+        <Text style={{color:"red"}}>Press Here! mnklnlnm
+
+        </Text>
+     </TouchableOpacity>
       <FlatList
         ItemSeparatorComponent={CustomSeparator}
         columnWrapperStyle={{justifyContent: 'space-evenly'}}

@@ -8,6 +8,9 @@ const HomeContribute: React.FC = () => {
             <div className={styles.container}>
                 <div className={styles.text}>
                     <h1>Be the senior you wanted<br/>as a junior</h1>
+                    <div className={styles.buttons}>
+                        <div className={styles.download}>Contribute</div>
+                    </div>
                 </div>
                 <div className={styles.image}>
                     <div className={styles.arrow}><img src='https://res.cloudinary.com/dguy8qpzi/image/upload/v1636274945/Arrow_xujefk.svg'></img></div>

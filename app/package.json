@@ -37,6 +37,7 @@
     "firebase": "9.3.0",
     "form-data": "4.0.0",
     "monaco-editor": "0.30.0",
+    "native-base": "3.2.1",
     "react": "17.0.1",
     "react-ace": "9.5.0",
     "react-dom": "17.0.1",

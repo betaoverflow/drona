@@ -10,6 +10,7 @@ import useColorScheme from '../hooks/useColorScheme'
 import CompilerScreen from '../screens/CompilerScreen'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import Home from '../screens/Home'
+import LoginScreen from '../screens/LoginScreen'
 import Opportunities from '../screens/Opportunities'
 import Questionnaire from '../screens/Questionnare'
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types'
@@ -38,6 +39,7 @@ function RootNavigator() {
             <Stack.Screen name="DRONA" component={Home} />
             <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
             <Stack.Screen name="Compiler" component={CompilerScreen} />
+            <Stack.Screen name="LoginScreen" component={LoginScreen} />
         </Stack.Navigator>
     )
 }
