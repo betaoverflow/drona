@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import axios from 'axios'
 import { Text, View } from '../components/Themed'
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler'
@@ -13,6 +13,7 @@ const Editor = () => {
     const [output, setOutput] = useState('')
     const [lang, setLang] = useState('cpp')
     const [filepath, setFilepath] = useState(undefined)
+    const webviewRef = useRef<any | null>(null);
 
     const handleSubmit = async () => {
         // Send image file to OCR and get result
@@ -30,6 +31,7 @@ const Editor = () => {
         })
 
         const OutputLocal = codeRes.data.output
+        console.log(OutputLocal);
 
         setOutput(OutputLocal!)
     }
@@ -39,8 +41,9 @@ const Editor = () => {
         mediaType: 'photo',
     }
 
+
     const imgCallback = async (res: any) => {
-        console.log(res)
+        // console.log(res)
         if ('didCancel' in res) {
             console.log('cancelled by user')
         } else if ('errorCode' in res) {
@@ -51,16 +54,33 @@ const Editor = () => {
             const filepathLocal = res.assets[0].uri
 
             const codeFromOcr = await getTextFromMaxOcr(filepathLocal!)
+            console.log(res)
+            
             setFilepath(filepathLocal)
             setCode(codeFromOcr!)
+            console.log(code);
+
+            const run = `editor.session.setValue('${code}')`;
+            console.log(run);
+
+            if (webviewRef.current) {
+                // console.log(webviewRef.current)
+                await webviewRef.current.injectJavaScript(run);
+            }
         }
     }
 
     const handleWebViewResponse = (data: string) => {
-        if (data == 'c_cpp' || data === 'python') {
-            setLang(data)
-        } else {
-            setCode(data)
+        console.log(data);
+        switch(data) {
+            case 'c_cpp':
+                setLang('cpp');
+                break;
+            case 'python':
+                setLang('py');
+                break;
+            default:
+                setCode(data);    
         }
     }
 
@@ -70,6 +90,7 @@ const Editor = () => {
                 <WebView
                     source={{ uri: 'file:///android_asset/editor.html' }}
                     onMessage={event => handleWebViewResponse(event.nativeEvent.data)}
+                    ref={webviewRef}
                 />
             </View>
 
