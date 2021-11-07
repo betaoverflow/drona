@@ -4,7 +4,7 @@ import RNFetchBlob from "rn-fetch-blob";
 const textFromArray: (inp: [string[]]) => string = (inp) => {
     let res = "";
     for (let i = 0; i < inp.length; i++) {
-        res += inp[i] + '\n';
+        res += inp[i] + '\\n';
     }
 
     return res;

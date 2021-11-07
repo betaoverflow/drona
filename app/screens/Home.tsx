@@ -34,6 +34,20 @@ export default function Home({ navigation }: RootTabScreenProps<'Home'>) {
                         </View>
                     </LinearGradient>
                 </TouchableOpacity>
+                {/* just for testing */}
+                <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
+                    <LinearGradient colors={['#FFAC71', '#FF8450']} start={{ x: 0, y: 0.2 }} style={styles.block}>
+                        <View style={styles.row}>
+                            <View style={styles.column1}>
+                                <Text style={styles.title}>TEST</Text>
+                                <Text>TEST</Text>
+                            </View>
+                            <View style={styles.column2}>
+                                <Image source={require('../assets/images/test.png')} />
+                            </View>
+                        </View>
+                    </LinearGradient>
+                </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Opportunities')}>
                     <LinearGradient colors={['#00CDAC', '#02AAB0']} start={{ x: 0, y: 0.2 }} style={styles.block}>
                         <View style={styles.row}>

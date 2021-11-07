@@ -12,6 +12,7 @@ export type RootStackParamList = {
     DRONA: NavigatorScreenParams<RootTabParamList> | undefined
     Compiler: undefined
     NotFound: undefined
+    LoginScreen:undefined
 }
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<RootStackParamList, Screen>
@@ -20,6 +21,7 @@ export type RootTabParamList = {
     Home: undefined
     Questionnaire: undefined
     Opportunities: undefined
+    LoginScreen: undefined
 }
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<
