@@ -6,10 +6,35 @@
 .heading {
     margin-top: 40%;
     font-size: 3.5rem;
+    padding: 1rem;
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
 }
 
-@media (max-width: 959px) {
+.getstarted, .download {
+    background-color: #0B4068;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 0 0.5rem 0 0.5rem;
+    cursor: pointer;
+  } 
+
+@media (max-width: 1030px) {
     .heading {
         margin-top: 10%;
+        font-size: 2.7rem;
     }
+
+    .getstarted, .download {
+        font-size: 13px;
+      } 
 }

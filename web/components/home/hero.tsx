@@ -9,6 +9,10 @@ const Hero: React.FC = () => {
                     {' '}
                     Empowering everyone <br /> to code with IBM`s eye
                 </h1>
+                <div className={styles.buttons}>
+                    <div className={styles.getstarted}>Get Started</div>
+                    <div className={styles.download}>Download</div>
+                </div>
             </div>
             <div style={{ float: 'right' }}>
                 <Image
