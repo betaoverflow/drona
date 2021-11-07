@@ -2,6 +2,7 @@ import React from 'react';
 import { Text } from '../../components/Themed';
 import OpportunityType from './opportunityType';
 import styled from '@emotion/native';
+import { Button } from 'react-native';
 
 const OpportunityCard = styled.View`
     display: flex;
@@ -37,6 +38,7 @@ const Opportunity: React.FC<OpportunityType> =  ({ url, company, role, duration,
                 <Text> { role } </Text>
                 <Text> { duration } months </Text>
                 <Text> { deadline } </Text>
+                <Button onPress={() => {}} title="visit" />
             </OppurtunityContent>
         </OpportunityCard>
     );
