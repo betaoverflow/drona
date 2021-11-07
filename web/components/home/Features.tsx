@@ -49,7 +49,7 @@ const Featurescarddata = [
 const Features = () => {
     return(
         <>
-        <div className={styles.features}>
+        <div className={styles.features} style={{color:"#fff"}}>
                 <div className={styles.leftfeatures}>
                     <div className={styles.featuresheading}>App Features</div>
                     <div className={styles.featurecards}>

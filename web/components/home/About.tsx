@@ -41,7 +41,7 @@ const Aboutcarddata = [
 const About = () => {
     return (
         <>
-            <div className={styles.about}>
+            <div className={styles.about} style={{color:"#fff"}}>
                 <div className={styles.heading}>What it does</div>
                 <div className={styles.aboutcards}>
                     {Aboutcarddata.map(function ncards(val) {
