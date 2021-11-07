@@ -1,11 +1,11 @@
 
 
 export const firebaseConfig = {
-    apiKey: "AIzaSyAb0sQ4_RksHb-op3cw94ksHldgcWKqiV0",
-  authDomain: "drona-betaoverflow.firebaseapp.com",
-  projectId: "drona-betaoverflow",
-  storageBucket: "drona-betaoverflow.appspot.com",
-  messagingSenderId: "855009041569",
-  appId: "1:855009041569:web:b2c38c63aff961d8f2e4e0",
-  measurementId: "G-F83WSVZ0KC"
+    apiKey: process.env.REACT_APP_API,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN,
+    projectId: process.env.REACT_APP_PROJECTID,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDERID,
+    appId: process.env.REACT_APP_APPID,
+    measurementId: process.env.REACT_MEASUREMENTID,
 }

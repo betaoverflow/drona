@@ -1,12 +1,18 @@
-import { Container } from 'native-base'
 import React from 'react'
-import { Text, View } from '../components/Themed'
+import { TextInput   } from 'react-native-gesture-handler'
+import { Button} from "react-native";
 
 export default function LoginScreen()
 {
     return (
-        <View>
-            <Text>LOGIN SCREEN</Text>
-        </View>
+        <>
+            <TextInput placeholder="Enter your email" />
+            <TextInput placeholder="Enter your password" />
+            <Button
+                title="Submit"
+                onPress={()=>console.log("hi")}
+            >
+            </Button>
+        </>
     )
 }

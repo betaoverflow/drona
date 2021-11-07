@@ -7,7 +7,7 @@ import * as firebase from 'firebase/app'
 import useCachedResources from './hooks/useCachedResources'
 import useColorScheme from './hooks/useColorScheme'
 import Navigation from './navigation'
-// import { firebaseConfig } from './config/firebase'
+import { firebaseConfig } from './config/firebase'
 
 
 export default function App() {
