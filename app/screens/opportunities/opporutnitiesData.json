@@ -1,70 +1,58 @@
-
-
 [
     {
-       "id": 1,
-       "url": "https://pbs.twimg.com/profile_images/1453818753880190978/HqrrEcrI_400x400.png",
-       "duration": 6,
-       "company": "CRED",
-       "role": "SDE intern",
-       "deadline": "19 Nov"
+        "id": 1,
+        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "tag": "Internship",
+        "company": "UBER",
+        "role": "SDE intern"
     },
     {
-       "id": 2,
-       "url": "https://pbs.twimg.com/profile_images/1453818753880190978/HqrrEcrI_400x400.png",
-       "duration": 6,
-       "company": "CRED",
-       "role": "SDE intern",
-       "deadline": "19 Nov"
+        "id": 2,
+        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "tag": "Internship",
+        "company": "UBER",
+        "role": "SDE intern"
     },
     {
-       "id": 3,
-       "url": "https://pbs.twimg.com/profile_images/1453818753880190978/HqrrEcrI_400x400.png",
-       "duration": 6,
-       "company": "CRED",
-       "role": "SDE intern",
-       "deadline": "19 Nov"
+        "id": 3,
+        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "tag": "Internship",
+        "company": "UBER",
+        "role": "SDE intern"
     },
     {
-       "id": 4,
-       "url": "https://pbs.twimg.com/profile_images/1453818753880190978/HqrrEcrI_400x400.png",
-       "duration": 6,
-       "company": "CRED",
-       "role": "SDE intern",
-       "deadline": "19 Nov"
+        "id": 4,
+        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "tag": "Internship",
+        "company": "UBER",
+        "role": "SDE intern"
     },
     {
-       "id": 5,
-       "url": "https://pbs.twimg.com/profile_images/1453818753880190978/HqrrEcrI_400x400.png",
-       "duration": 6,
-       "company": "CRED",
-       "role": "SDE intern",
-       "deadline": "19 Nov"
+        "id": 5,
+        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "tag": "Internship",
+        "company": "UBER",
+        "role": "SDE intern"
     },
     {
-       "id": 6,
-       "url": "https://pbs.twimg.com/profile_images/1453818753880190978/HqrrEcrI_400x400.png",
-       "duration": 6,
-       "company": "CRED",
-       "role": "SDE intern",
-       "deadline": "19 Nov"
+        "id": 6,
+        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "tag": "Internship",
+        "company": "UBER",
+        "role": "SDE intern"
     },
     {
-       "id": 7,
-       "url": "https://pbs.twimg.com/profile_images/1453818753880190978/HqrrEcrI_400x400.png",
-       "duration": 6,
-       "company": "CRED",
-       "role": "SDE intern",
-       "deadline": "19 Nov"
+        "id": 7,
+        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "tag": "Internship",
+        "company": "UBER",
+        "role": "SDE intern"
     },
     {
-       "id": 8,
-       "url": "https://pbs.twimg.com/profile_images/1453818753880190978/HqrrEcrI_400x400.png",
-       "duration": 6,
-       "company": "CRED",
-       "role": "SDE intern",
-       "deadline": "19 Nov"
+        "id": 8,
+        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "tag": "Internship",
+        "company": "UBER",
+        "role": "SDE intern"
     }
- ]
- 
- 
+]
