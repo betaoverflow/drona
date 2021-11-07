@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Text, View } from '../components/Themed'
-import { TextInput } from 'react-native-gesture-handler'
-import { Picker } from '@react-native-picker/picker'
+import { TextInput, TouchableOpacity } from 'react-native-gesture-handler'
 import { Button } from 'react-native'
 import { CameraOptions, launchCamera, launchImageLibrary } from 'react-native-image-picker'
 import { getTextFromMaxOcr } from '../components/compiler/maxOcr'
-import WebViewEditor from './WebViewEditor'
 import { StyleSheet } from 'react-native'
 import { WebView } from 'react-native-webview'
 
@@ -68,23 +66,35 @@ const Editor = () => {
 
     return (
         <View style={styles.container}>
-            <WebView
-                source={{ uri: 'file:///android_asset/editor.html' }}
-                onMessage={event => handleWebViewResponse(event.nativeEvent.data)}
-            />
-
-            <TextInput style={{ color: '#232323' }} multiline={true} numberOfLines={4} value={code} onChangeText={code => setCode(code)} />
-            <Button onPress={props => launchCamera(cameraOptions, imgCallback)} title="Launch Camera" />
-            <Button onPress={props => launchImageLibrary(cameraOptions, imgCallback)} title="Select from gallery" />
-            {!filepath ? <Text>No file</Text> : <Text> {filepath} </Text>}
-            <View>
-                <Picker selectedValue={lang} onValueChange={(value, index) => setLang(value)} mode="dropdown">
-                    <Picker.Item label="C++" value="cpp" />
-                    <Picker.Item label="Python" value="py" />
-                </Picker>
+            <View style={{ height: 350 }}>
+                <WebView
+                    source={{ uri: 'file:///android_asset/editor.html' }}
+                    onMessage={event => handleWebViewResponse(event.nativeEvent.data)}
+                />
             </View>
-            <Button onPress={handleSubmit} title="Submit" />
-            <Text>{output}</Text>
+
+            <View>
+                <View style={styles.uploader}>
+                    <TouchableOpacity
+                        onPress={() => launchCamera(cameraOptions, imgCallback)}
+                        style={{ ...styles.button, ...styles.m1, ...styles.buttonSmall }}
+                    >
+                        <Text style={styles.buttonText}>Launch Camera</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => launchImageLibrary(cameraOptions, imgCallback)}
+                        style={{ ...styles.button, ...styles.m1, ...styles.buttonSmall }}
+                    >
+                        <Text style={styles.buttonText}>Select from gallery</Text>
+                    </TouchableOpacity>
+                </View>
+                {/* <TextInput style={{ color: '#232323' }} multiline={true} numberOfLines={4} value={code} onChangeText={code => setCode(code)} /> */}
+
+                <TouchableOpacity onPress={handleSubmit} style={{ ...styles.button, ...styles.m3 }}>
+                    <Text style={styles.buttonText}>Run Code</Text>
+                </TouchableOpacity>
+                <Text>{output}</Text>
+            </View>
         </View>
     )
 }
@@ -93,35 +103,35 @@ const styles = StyleSheet.create({
     container: {
         height: '100%',
     },
-    title: {
-        fontSize: 22,
-        fontWeight: 'bold',
+    buttonSmall: {
+        width: 150,
+    },
+    button: {
+        height: 40,
+        width: 250,
+        alignSelf: 'center',
         color: '#fff',
-        paddingBottom: 15,
+        backgroundColor: '#0B4068',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 12,
     },
-    block: {
-        width: '90%',
-        height: 170,
-        borderRadius: 20,
-        margin: 15,
-        padding: 10,
-        marginLeft: '5%',
+    m3: {
+        marginTop: 48,
     },
-    row: {
-        flex: 1,
+    m2: {
+        marginTop: 32,
+    },
+    m1: {
+        marginTop: 16,
+    },
+    buttonText: {
+        color: '#fff',
+    },
+    uploader: {
+        display: 'flex',
         flexDirection: 'row',
-        flexWrap: 'wrap',
-        backgroundColor: 'transparent',
-    },
-    column1: {
-        flex: 0.7,
-        backgroundColor: 'transparent',
-        padding: 5,
-    },
-    column2: {
-        flex: 0.3,
-        backgroundColor: 'transparent',
-        paddingTop: 5,
+        justifyContent: 'space-evenly',
     },
 })
 
