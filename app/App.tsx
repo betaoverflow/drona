@@ -14,7 +14,6 @@ export default function App() {
     const isLoadingComplete = useCachedResources()
     const colorScheme = useColorScheme()
     firebase.initializeApp(firebaseConfig)
-    console.log(process.env['PORT'])
     if (!isLoadingComplete) {
         return null
     } else {
