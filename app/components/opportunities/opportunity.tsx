@@ -1,8 +1,8 @@
 import React from 'react'
-import { Text, View } from '../../components/Themed'
+import { View } from '../Themed'
 import OpportunityType from './opportunityType'
 import styled from '@emotion/native'
-import { Button, TouchableOpacity, Linking } from 'react-native'
+import { TouchableOpacity, Linking } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 
 const OpportunityCard = styled.View`
@@ -28,13 +28,13 @@ const OppurtunityContent = styled.View`
     height: 50px;
     width: 100%;
     align-items: center;
-    padding: 4%;
+    padding: 2%;
 `
 const CompanyContent = styled.View`
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 50px;
+    height: 60px;
     width: 100%;
     align-items: center;
     padding: 5%;
@@ -44,14 +44,18 @@ const Company = styled.Text`
     color: #fff;
     background-color: grey;
     border-radius: 20px;
-    padding: 7px;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
 `
 
 const Tag = styled.Text`
     color: #fff;
     background-color: grey;
     border-radius: 20px;
-    padding: 7px;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
     margin-left: 7px;
 `
 
@@ -60,7 +64,7 @@ const Role = styled.Text`
     font-size: 18px;
 `
 
-const Opportunity: React.FC<OpportunityType> = ({ url, company, role, tag }) => {
+const Opportunity: React.FC<OpportunityType> = ({ url, tag, role, company }) => {
     return (
         <View style={{ alignItems: 'center' }}>
             <OpportunityCard>

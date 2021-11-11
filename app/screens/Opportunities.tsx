@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { ListRenderItem } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 import { View } from '../components/Themed'
-import Opportunity from './opportunities/opportunity'
-import OpportunityType from './opportunities/opportunityType'
-import oppData from './opportunities/opporutnitiesData.json'
+import Opportunity from '../components/opportunities/opportunity'
+import OpportunityType from '../components/opportunities/opportunityType'
+import oppData from '../components/opportunities/opporutnitiesData.json'
 import styled from '@emotion/native'
 
 const renderItem: ListRenderItem<OpportunityType> = ({ item }) => (
@@ -13,7 +13,7 @@ const renderItem: ListRenderItem<OpportunityType> = ({ item }) => (
 
 const CustomSeparator = styled.View`
     width: 100%;
-    height: 20px;
+    height: 0px;
 `
 
 export default function Opportunities() {
