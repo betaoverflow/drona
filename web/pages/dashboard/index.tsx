@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styles from '../styles/Dashboard.module.scss'
+import styles from '../../styles/Dashboard.module.scss'
 import axios from 'axios'
 import Head from 'next/head'
 
