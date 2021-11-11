@@ -33,7 +33,7 @@ export default function questionContribute() {
             alert('You are not logged in')
             window.location.href = '/href'
         }
-    })
+    }, [])
 
     return (
         <>
