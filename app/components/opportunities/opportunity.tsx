@@ -64,11 +64,11 @@ const Role = styled.Text`
     font-size: 18px;
 `
 
-const Opportunity: React.FC<OpportunityType> = ({ url, tag, role, company }) => {
+const Opportunity: React.FC<OpportunityType> = ({ url, tag, role, company, logo }) => {
     return (
         <View style={{ alignItems: 'center' }}>
             <OpportunityCard>
-                <CircularImage source={{ uri: url }} />
+                <CircularImage source={{ uri: logo }} />
                 <OppurtunityContent>
                     <Role> {role} </Role>
                     <TouchableOpacity onPress={() => Linking.openURL(url)}>

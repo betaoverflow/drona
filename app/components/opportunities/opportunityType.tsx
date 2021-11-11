@@ -4,4 +4,5 @@ export default interface OpportunityType {
     tag: string
     company: string
     role: string
+    logo: string
 }

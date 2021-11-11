@@ -1,11 +1,12 @@
 const mongooseCompany = require('mongoose')
 
-var question = mongooseCompany.model('question', {
+var company = mongooseCompany.model('company', {
     url: { type: String },
     tag: { type: String },
     company: { type: String },
     role: { type: String },
+    logo: { type: String },
     isApproved: { type: Boolean, default: false },
 })
 
-module.exports = { question }
+module.exports = { company }

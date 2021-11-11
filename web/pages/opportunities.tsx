@@ -5,12 +5,13 @@ import axios from 'axios'
 import { useState } from 'react'
 import styles from '../styles/Contribute.module.scss'
 
-async function handleSubmit(url: string, tag: string, company: string, role: string) {
+async function handleSubmit(url: string, tag: string, company: string, role: string, logo: string) {
     const payload = JSON.stringify({
         url: url,
         tag: tag,
         company: company,
         role: role,
+        logo: logo,
     })
 
     try {
@@ -25,10 +26,11 @@ async function handleSubmit(url: string, tag: string, company: string, role: str
 }
 
 const Opportunities = () => {
-    const [url, setUrl] = useState('')
-    const [tag, setTag] = useState('')
-    const [company, setCompany] = useState('')
-    const [role, setRole] = useState('')
+    const [url, setUrl] = useState('https://drona-drab.vercel.app/')
+    const [tag, setTag] = useState('SDE intern')
+    const [company, setCompany] = useState('Drona')
+    const [role, setRole] = useState('job')
+    const [logo, setLogo] = useState('https://res.cloudinary.com/dguy8qpzi/image/upload/v1635952594/achieve_hmzdar.png')
 
     return (
         <>
@@ -94,11 +96,21 @@ const Opportunities = () => {
                                 className={styles.formText}
                                 onChange={e => setTag(e.target.value)}
                             />
+                            <TextField
+                                id="outlined-basic"
+                                variant="outlined"
+                                label="Logo"
+                                placeholder="Enter the url of logo"
+                                margin="normal"
+                                type="string"
+                                className={styles.formText}
+                                onChange={e => setLogo(e.target.value)}
+                            />
 
                             <br />
                             <Button
                                 style={{ backgroundColor: '#000', color: '#FFFFFF', fontWeight: 800 }}
-                                onClick={() => handleSubmit(url, tag, company, role)}
+                                onClick={() => handleSubmit(url, tag, company, role, logo)}
                             >
                                 Submit
                             </Button>

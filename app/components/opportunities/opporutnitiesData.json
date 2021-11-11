@@ -1,58 +1,66 @@
 [
     {
         "id": 1,
-        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "logo": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
         "tag": "Internship",
         "company": "UBER",
-        "role": "SDE intern"
+        "role": "SDE intern",
+        "url": "https://www.uber.com/in/en/"
     },
     {
         "id": 2,
-        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "logo": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
         "tag": "Internship",
         "company": "UBER",
-        "role": "SDE intern"
+        "role": "SDE intern",
+        "url": "https://www.uber.com/in/en/"
     },
     {
         "id": 3,
-        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "logo": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
         "tag": "Internship",
         "company": "UBER",
-        "role": "SDE intern"
+        "role": "SDE intern",
+        "url": "https://www.uber.com/in/en/"
     },
     {
         "id": 4,
-        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "logo": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
         "tag": "Internship",
         "company": "UBER",
-        "role": "SDE intern"
+        "role": "SDE intern",
+        "url": "https://www.uber.com/in/en/"
     },
     {
         "id": 5,
-        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "logo": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
         "tag": "Internship",
         "company": "UBER",
-        "role": "SDE intern"
+        "role": "SDE intern",
+        "url": "https://www.uber.com/in/en/"
     },
     {
         "id": 6,
-        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "logo": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
         "tag": "Internship",
         "company": "UBER",
-        "role": "SDE intern"
+        "role": "SDE intern",
+        "url": "https://www.uber.com/in/en/"
     },
     {
         "id": 7,
-        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "logo": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
         "tag": "Internship",
         "company": "UBER",
-        "role": "SDE intern"
+        "role": "SDE intern",
+        "url": "https://www.uber.com/in/en/"
     },
     {
         "id": 8,
-        "url": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
+        "logo": "https://fma.ph/wp-content/uploads/2017/11/new-uber-logo-512-1200x630.jpg",
         "tag": "Internship",
         "company": "UBER",
-        "role": "SDE intern"
+        "role": "SDE intern",
+        "url": "https://www.uber.com/in/en/"
     }
 ]
