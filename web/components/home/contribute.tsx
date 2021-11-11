@@ -6,7 +6,7 @@ const HomeContribute: React.FC = () => {
     <>
         <div className={styles.contribute}>
             <div className={styles.container}>
-                <div className={styles.text}>
+                <div className={styles.text} style={{color:"#fff"}}>
                     <h1>Be the senior you wanted<br/>as a junior</h1>
                     <div className={styles.buttons}>
                         <div className={styles.download}>Contribute</div>

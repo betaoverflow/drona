@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
             <div style={{ float: 'left' }}>
                 <h1 className={styles.heading}>
                     {' '}
-                    Empowering everyone <br /> to code with IBM`s eye
+                    Empowering everyone <br /> to code with IBM's eye
                 </h1>
                 <div className={styles.buttons}>
                     <div className={styles.getstarted}>Get Started</div>

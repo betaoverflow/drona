@@ -42,7 +42,7 @@ const Infocarddata = [
 const Info = () => {
     return (
         <>
-            <div className={styles.info} style={{color:"#fff"}}>
+            <div className={styles.info}>
                 <div className={styles.infoheading}>How it works</div>
                 <div className={styles.infocards}>
                     {Infocarddata.map(function ncards(val) {

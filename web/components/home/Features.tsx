@@ -49,7 +49,7 @@ const Featurescarddata = [
 const Features: React.FC = () => {
     return(
         <>
-        <div className={styles.features} style={{color:"#fff"}}>
+        <div className={styles.features}>
                 <div className={styles.leftfeatures}>
                     <div className={styles.featuresheading}>App Features</div>
                     <div className={styles.featurecards}>
