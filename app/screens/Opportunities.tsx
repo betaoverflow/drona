@@ -22,10 +22,6 @@ export default function Opportunities() {
     return (
         <ScrollView>
             <View>
-                {/* Want to get update whenever we push a new oppurtunity? Click here */}
-                <TouchableOpacity onPress={() => console.log('When clicked here get the option to login')}>
-                    <Text style={{ color: 'red' }}>Press Here! mnklnlnm</Text>
-                </TouchableOpacity>
                 <FlatList
                     ItemSeparatorComponent={CustomSeparator}
                     data={opportunites}

@@ -13,7 +13,6 @@ const linking: LinkingOptions<RootStackParamList> = {
                 },
             },
             Compiler: 'compiler',
-            LoginScreen:'LoginScreen',
             NotFound: '*',
         },
     },
