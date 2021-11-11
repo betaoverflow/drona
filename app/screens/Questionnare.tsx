@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
     },
-    button:{
-        backgroundColor:'#0B4068',
-        padding:15,
-        marginTop:20,
-        width:"80%",
-        borderRadius:20,
-        alignItems:"center",
-    }
+    button: {
+        backgroundColor: '#0B4068',
+        padding: 15,
+        marginTop: 20,
+        width: '80%',
+        borderRadius: 20,
+        alignItems: 'center',
+    },
 })

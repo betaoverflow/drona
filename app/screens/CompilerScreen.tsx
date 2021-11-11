@@ -13,7 +13,7 @@ const Editor = () => {
     const [output, setOutput] = useState('')
     const [lang, setLang] = useState('cpp')
     const [filepath, setFilepath] = useState(undefined)
-    const webviewRef = useRef<any | null>(null);
+    const webviewRef = useRef<any | null>(null)
 
     const handleSubmit = async () => {
         // Send image file to OCR and get result
@@ -31,7 +31,7 @@ const Editor = () => {
         })
 
         const OutputLocal = codeRes.data.output
-        console.log(OutputLocal);
+        console.log(OutputLocal)
 
         setOutput(OutputLocal!)
     }
@@ -40,7 +40,6 @@ const Editor = () => {
         saveToPhotos: false,
         mediaType: 'photo',
     }
-
 
     const imgCallback = async (res: any) => {
         // console.log(res)
@@ -55,32 +54,32 @@ const Editor = () => {
 
             const codeFromOcr = await getTextFromMaxOcr(filepathLocal!)
             console.log(res)
-            
+
             setFilepath(filepathLocal)
             setCode(codeFromOcr!)
-            console.log(code);
+            console.log(code)
 
-            const run = `editor.session.setValue('${code}')`;
-            console.log(run);
+            const run = `editor.session.setValue('${code}')`
+            console.log(run)
 
             if (webviewRef.current) {
                 // console.log(webviewRef.current)
-                await webviewRef.current.injectJavaScript(run);
+                await webviewRef.current.injectJavaScript(run)
             }
         }
     }
 
     const handleWebViewResponse = (data: string) => {
-        console.log(data);
-        switch(data) {
+        console.log(data)
+        switch (data) {
             case 'c_cpp':
-                setLang('cpp');
-                break;
+                setLang('cpp')
+                break
             case 'python':
-                setLang('py');
-                break;
+                setLang('py')
+                break
             default:
-                setCode(data);    
+                setCode(data)
         }
     }
 
