@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Grid, Button, TextField } from '@material-ui/core/'
+import { Grid, Button, TextField } from '@material-ui/core'
 import styles from '../styles/Contribute.module.scss'
 import Head from 'next/head'
 import axios from 'axios'
