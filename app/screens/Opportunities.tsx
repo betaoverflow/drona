@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { ListRenderItem, ScrollView } from 'react-native'
-import { FlatList, TouchableOpacity } from 'react-native-gesture-handler'
-import { Text, View } from '../components/Themed'
+import { ListRenderItem } from 'react-native'
+import { FlatList } from 'react-native-gesture-handler'
+import { View } from '../components/Themed'
 import Opportunity from './opportunities/opportunity'
 import OpportunityType from './opportunities/opportunityType'
 import oppData from './opportunities/opporutnitiesData.json'
@@ -20,8 +20,9 @@ export default function Opportunities() {
     const [opportunites, setOpportunities] = useState<OpportunityType[] | null>(oppData)
 
     return (
-        <ScrollView>
+        <>
             <View>
+                <View style={{height:10}}></View>
                 <FlatList
                     ItemSeparatorComponent={CustomSeparator}
                     data={opportunites}
@@ -29,6 +30,6 @@ export default function Opportunities() {
                     keyExtractor={item => item.id}
                 />
             </View>
-        </ScrollView>
+        </>
     )
 }
