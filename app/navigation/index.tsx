@@ -31,7 +31,7 @@ function RootNavigator() {
             screenOptions={{
                 headerTintColor: 'white',
                 headerTitleAlign: 'center',
-                headerStyle: { backgroundColor: '#0B4068' },
+                headerStyle: { backgroundColor: '#232323' },
                 headerTitleStyle: { fontWeight: '800' },
             }}
         >
@@ -64,12 +64,12 @@ function BottomTabNavigator() {
                     right: '5.51%',
                     bottom: '2%',
                     padding: 2,
-                    backgroundColor: '#0B4068',
+                    backgroundColor: '#232323',
                 },
 
                 headerTintColor: 'white',
                 headerTitleAlign: 'center',
-                headerStyle: { backgroundColor: '#0B4068' },
+                headerStyle: { backgroundColor: '#232323' },
             }}
         >
             <BottomTab.Screen
