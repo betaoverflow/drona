@@ -8,12 +8,14 @@ import Features from './Features'
 import HomeContribute from './contribute'
 import Footer from './footer'
 import Hero from './hero'
+import Opportunities from './Opportunities'
 
 const HomeContainer: React.FC = () => {
     return (
         <>
             <Header />
             <Hero />
+            <Opportunities/>
             <About />
             <Info/>
             <Compiler/>

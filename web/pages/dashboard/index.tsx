@@ -31,11 +31,15 @@ function Contribute() {
                 </div>
                 <div className={styles.cards}>
                     <div className={styles.card1}>
-                        <Link href="/dashboard/questionVerify"><h1>Verify Question!</h1></Link>
+                        <div className={styles.card1text}>
+                            <Link href="/dashboard/questionVerify">Verify Question!</Link>
+                        </div>
                         <img src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636662966/image-removebg-preview_13_nu0xyn.png" alt=""></img>
                     </div>
                     <div className={styles.card2}>
-                        <Link href="/dashboard/opportunityVerify"><h1>Verify Opportunity!</h1></Link>
+                        <div className={styles.card2text}>
+                            <Link href="/dashboard/opportunityVerify">Verify Opportunity!</Link>
+                        </div>
                         <img src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636662966/image-removebg-preview_14_g4af4t.png" alt=""></img>
                     </div>
                 </div>

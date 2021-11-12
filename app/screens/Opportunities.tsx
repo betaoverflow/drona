@@ -8,7 +8,7 @@ import oppData from '../components/opportunities/opporutnitiesData.json'
 import styled from '@emotion/native'
 
 const renderItem: ListRenderItem<OpportunityType> = ({ item }) => (
-    <Opportunity id={item.id} url={item.url} tag={item.tag} company={item.company} role={item.role} />
+    <Opportunity id={item.id} url={item.url} tag={item.tag} company={item.company} role={item.role} logo={item.logo} />
 )
 
 const CustomSeparator = styled.View`
@@ -22,7 +22,7 @@ export default function Opportunities() {
     return (
         <>
             <View>
-                <View style={{height:10}}></View>
+                <View style={{ height: 10 }}></View>
                 <FlatList
                     ItemSeparatorComponent={CustomSeparator}
                     data={opportunites}

@@ -1,6 +1,6 @@
 .dashboard{
     background-color: white;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 
     display: flex;
@@ -8,12 +8,15 @@
     justify-content: space-around;
 }
 
-.image{
-    // padding: 2rem;
+.image h1{
+    padding-top: 1rem;
+    font-family: poppins;
+    font-weight: 700;
 }
 
 .image img{
     border-radius: 100%;
+    padding-top: 1rem;
 }
 
 .cards{
@@ -24,7 +27,7 @@
 }
 
 .card1, .card2 {
-    width: 430px;
+    width: 470px;
     height: 250px;
     border-radius: 10px;
     display: flex;
@@ -48,5 +51,43 @@
 }
 
 .card2 img{
-    width: 250px;
+    width: 220px;
+}
+
+.card1text, .card2text{
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    padding-left: 2rem;
+    font-weight: 700;
+    font-family: poppins;
+}
+
+@media(max-width: 975px){
+    .cards{
+        flex-direction: column;
+    }
+
+    .card1, .card2 {
+        margin: 2rem;
+    }
+}
+
+@media(max-width: 520px){
+    .card1, .card2 {
+        width: 330px;
+        height: 180px;
+    }
+
+    .card1 img{
+        width: 150px;
+    }
+    
+    .card2 img{
+        width: 170px;
+    }
+
+    .card1text, .card2text{
+        font-size: 30px;
+    }
 }
