@@ -28,7 +28,7 @@ export const ThemeProvider = ({ children }: Props) => {
         root.style.setProperty('--text-primary', palette[name].tp)
         root.style.setProperty('--bg-1', palette[name].bg_1)
         root.style.setProperty('--text-secondary', palette[name].ts)
-
+        root.style.setProperty('--text-invert', palette[name].ti)
         root.style.setProperty('--bg-3', palette[name].bg_3)
 
         // document.getElementById('selector')?.classList.toggle('invert');
