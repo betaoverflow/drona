@@ -15,7 +15,7 @@ const HomeContribute: React.FC = () => {
                 </div>
                 <div className={styles.image}>
                     {/* <div className={styles.arrow}><img src='https://res.cloudinary.com/dguy8qpzi/image/upload/v1636274945/Arrow_xujefk.svg'></img></div> */}
-                    <div className={styles.card}><img src='https://res.cloudinary.com/dguy8qpzi/image/upload/v1636727665/image-removebg-preview_17_m6fgpg.png'></img></div>
+                    <div className={styles.card}><img src='https://res.cloudinary.com/dguy8qpzi/image/upload/v1636734878/image-removebg-preview_17_1_sileqb.png'></img></div>
                 </div>
             </div>
         </div>

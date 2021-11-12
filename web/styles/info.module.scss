@@ -1,6 +1,6 @@
 .info{
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
 }
@@ -18,6 +18,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+}
+
+.infocard{
+    width: 30%;
+}
+
+.logo img{
+    width: 320px;
 }
 
 .cardheading{
@@ -44,6 +52,7 @@
 
     .infocard{
         padding: 1rem;
+        width: fit-content;
     }
 
     .infoheading{
