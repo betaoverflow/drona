@@ -1,40 +1,72 @@
-.mainImage {
-    margin-top: 10%;
-    width: 90%;
-}
-
-.heading {
-    margin-top: 40%;
-    font-size: 3.5rem;
-    padding: 1rem;
-}
-.buttons{
+.heroContainer {
     display: flex;
-    justify-content: space-evenly;
-    padding: 2rem;
-}
-
-.getstarted, .download {
-    background-color: #0B4068;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 10px;
-    margin: 0 0.5rem 0 0.5rem;
-    cursor: pointer;
-  } 
-
-@media (max-width: 1030px) {
-    .heading {
-        margin-top: 10%;
-        font-size: 2.7rem;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    @media screen and (max-width: 1030px) {
+        flex-direction: column;
     }
-
-    .getstarted, .download {
-        font-size: 13px;
-      } 
+    .leftContainer {
+        flex: 0.5;
+        padding-left: 15%;
+        @media screen and (max-width: 1030px) {
+            padding: 0 4%;
+        }
+        .heading {
+            margin-top: 25%;
+            font-size: 3.5rem;
+            text-align: left;
+            @media screen and (max-width: 768px) {
+                font-size: 2.7rem;
+            }
+        }
+        .subheading {
+            margin-top: 2%;
+            text-align: left;
+            line-height: 1.4rem;
+        }
+        .buttons {
+            align-items: center;
+            display: flex;
+            padding: 2rem;
+            cursor: pointer;
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+            .download,
+            .demo {
+                padding: 20px 40px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                border-radius: 10px;
+                margin: 0 0.5rem 0 0.5rem;
+                width: 250px;
+                @media screen and (max-width: 768px) {
+                    width: 250px;
+                    font-size: 15px;
+                }
+            }
+            .demo {
+                background-color: var(--text-primary);
+                color: var(--text-invert);
+                border: 2px solid var(--text-primary);
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+            .download {
+                border: 2px solid var(--text-primary);
+                @media screen and (max-width: 768px) {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .rightContainer {
+        flex: 0.5;
+        padding-right: 5%;
+    }
 }
