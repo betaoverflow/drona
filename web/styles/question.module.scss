@@ -12,7 +12,7 @@
 .container{
     width: 70%;
     height: 40vh;
-    background-color: #0B4068;
+    background: linear-gradient(335.73deg, #678D28 0%, #8CA75F 98.52%);
     border-radius: 16px;
     display: flex;
     flex-direction: row;
@@ -52,12 +52,19 @@
 .image{
     display: flex;
     flex-direction: row;
-    padding-top: 5rem;
+    // padding-top: 5rem;
 }
 
 .card{
     overflow: hidden;
     padding-left: 2rem;
+}
+
+.card img{
+    width: 370px;
+    height: 370px;
+    background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media(max-width: 1280px){
@@ -97,8 +104,15 @@
 
 @media(max-width: 540px){
     .card img{
-        width: 170px;
-        height: 210px;
+        width: 310px;
+        height: 310px;
+    }
+
+    .container{
+        width: 80%;
+        height: fit-content;
+        flex-direction: column;
+        margin: 2rem 0 2rem 0;
     }
 
     .arrow img{
