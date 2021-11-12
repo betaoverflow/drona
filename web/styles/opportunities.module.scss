@@ -3,7 +3,7 @@
 
 .contribute{
     width: 100%;
-    height: 45vh;
+    min-height: 45vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +11,7 @@
 
 .container{
     width: 70%;
-    height: 40vh;
+    height: fit-content;
     // background: linear-gradient(89.84deg, rgba(159, 205, 255, 0.2) -8.33%, rgba(172, 214, 255, 0.2) 108.35%, rgba(145, 199, 253, 0.2) 108.35%), linear-gradient(308.98deg, #9fd6ff 0%, #a1d0ff 67.66%);
     border-radius: 16px;
     background: linear-gradient(335.73deg, #91C6ED 0%, #91C6ED 98.52%);
@@ -22,7 +22,7 @@
 .text{
     display: flex;
     align-items: flex-start;
-    padding: 2rem 0rem 0rem 4rem;
+    padding: 2rem 0rem 2rem 4rem;
     flex-direction: column;
 }
 
@@ -79,7 +79,7 @@
     }
 
     .text{
-        padding: 2rem 0rem 0rem 2rem;
+        padding: 2rem 2rem 2rem 2rem;
     }
 }
 
@@ -90,7 +90,7 @@
     }
     .container{
         width: 80%;
-        height: 60vh;
+        height: fit-content;
         flex-direction: column;
         margin: 2rem 0 2rem 0;
     }
@@ -106,7 +106,7 @@
 @media(max-width: 540px){
     .card img{
         width: 310px;
-        height: 310px;
+        // height: 310px;
     }
 
     .container{
@@ -114,11 +114,6 @@
         height: fit-content;
         flex-direction: column;
         margin: 2rem 0 2rem 0;
-    }
-
-    .arrow img{
-        width: 120px;
-        height: 120px;
     }
 
     .buttons{

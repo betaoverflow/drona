@@ -24,6 +24,10 @@
     width: 30%;
 }
 
+.logo img{
+    width: 320px;
+}
+
 .cardheading{
     font-size: 25px;
     font-weight: bolder;
@@ -48,6 +52,7 @@
 
     .infocard{
         padding: 1rem;
+        width: fit-content;
     }
 
     .infoheading{
