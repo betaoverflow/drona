@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from '../../styles/question.module.scss'
-import Image from 'next/image'
+
 const HomeContribute: React.FC = () => {
     return (
         <>

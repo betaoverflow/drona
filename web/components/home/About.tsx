@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../../styles/about.module.scss'
-import Image from 'next/image'
+
 const Aboutcard = (props: any) => {
     return (
         <div className={styles.aboutcard}>

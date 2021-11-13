@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from '../../styles/opportunities.module.scss'
-import Image from 'next/image'
 
 const Opportunities: React.FC = () => {
     return (

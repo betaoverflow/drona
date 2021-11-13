@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from '../../styles/features.module.scss'
-import Image from 'next/image'
 
 const Featurescard = (props: any) => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../../styles/Hero.module.scss'
-import Image from 'next/image'
+
 const Hero: React.FC = () => {
     return (
         <div className={styles.heroContainer}>
