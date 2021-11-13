@@ -5,7 +5,7 @@ const Infocard = (props: any) => {
     return (
         <div className={styles.infocard}>
             <div className={styles.logo}>
-                <Image src={props.logo} alt="logo" />
+                <img src={props.logo} alt="logo" />
             </div>
             <div className={styles.cardtext}>
                 <div className={styles.cardheading}>{props.Heading}</div>

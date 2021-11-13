@@ -18,7 +18,7 @@ const Opportunities: React.FC = () => {
                     </div>
                     <div className={styles.image}>
                         <div className={styles.card}>
-                            <Image
+                            <img
                                 src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636730647/image-removebg-preview_18_qmg7q2.png"
                                 alt="opportunities"
                             />

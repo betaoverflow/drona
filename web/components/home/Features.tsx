@@ -6,7 +6,7 @@ const Featurescard = (props: any) => {
     return (
         <div className={styles.featurescard}>
             <div className={styles.logo}>
-                <Image src={props.logo} alt="feature logo" />
+                <img src={props.logo} alt="feature logo" />
             </div>
             <div className={styles.cardtext}>
                 <div className={styles.cardheading}>{props.Heading}</div>
@@ -59,7 +59,7 @@ const Features: React.FC = () => {
                 </div>
                 <div className={styles.rightfeatures}>
                     <div className={styles.image1}>
-                        <Image
+                        <img
                             className={styles.mainImage1}
                             src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636807630/screen3_xyhf08.svg"
                             width={380}
@@ -69,7 +69,7 @@ const Features: React.FC = () => {
                     </div>
 
                     <div className={styles.image2}>
-                        <Image
+                        <img
                             src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636807636/screen2_zhwtr8.svg"
                             width={380}
                             height={700}

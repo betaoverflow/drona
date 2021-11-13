@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
                 </div>
             </div>
             <div className={styles.rightContainer}>
-                <Image
+                <img
                     src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636009473/drona-homeui_xqlfkq.png"
                     width={380}
                     height={700}

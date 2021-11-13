@@ -45,9 +45,9 @@ const Opportunities = () => {
             <div className={styles.container}>
                 <Grid container className={styles.card}>
                     <Grid item xs={12} sm={12} md={7}>
-                        <Image
+                        <img
                             src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636637981/drona-opportunity_mt1axs.png"
-                            // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             alt="Opportunities UI drona"
                         />
                     </Grid>

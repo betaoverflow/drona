@@ -22,7 +22,7 @@ const HomeContribute: React.FC = () => {
                     <div className={styles.image}>
                         {/* <div className={styles.arrow}><img src='https://res.cloudinary.com/dguy8qpzi/image/upload/v1636274945/Arrow_xujefk.svg'></img></div> */}
                         <div className={styles.card}>
-                            <Image
+                            <img
                                 src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636734878/image-removebg-preview_17_1_sileqb.png"
                                 alt="contribute"
                             />
