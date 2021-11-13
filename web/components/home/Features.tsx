@@ -59,13 +59,26 @@ const Features: React.FC = () => {
                     </div>
                 </div>
                 <div className={styles.rightfeatures}>
-                    <Image
-                        src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636009473/drona-homeui_xqlfkq.png"
-                        width={380}
-                        height={700}
-                        className={styles.mainImage}
-                        alt="Drona mobile app home screen"
-                    />
+
+                    <div className={styles.image1}>
+                        <Image 
+                            className={styles.mainImage1}
+                            src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636807630/screen3_xyhf08.svg"
+                            width={380}
+                            height={700}
+                            alt="Drona mobile app home screen"
+                        />
+                    </div>
+
+                    <div className={styles.image2}> 
+                        <Image
+                            src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636807636/screen2_zhwtr8.svg"
+                            width={380}
+                            height={700}
+                            className={styles.mainImage2}
+                            alt="Drona mobile app home screen"
+                        />
+                    </div>
                 </div>
                 
             </div>
