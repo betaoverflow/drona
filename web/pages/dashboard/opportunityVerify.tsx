@@ -7,7 +7,7 @@ export default function OpportunityVerify() {
     useEffect(() => {
         if (localStorage.getItem('token')) {
             try {
-                axios.get(`http://localhost:8080/api/oportunity`).then(function (response) {
+                axios.get(`http://drona-ibm.herokuapp.com/api/oportunity`).then(function (response) {
                     // handle success
                     setOpportunity(response.data)
                 })

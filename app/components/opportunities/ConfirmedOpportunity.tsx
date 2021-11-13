@@ -16,7 +16,7 @@ export default function ConfirmedOpportunity() {
 
     useEffect(() => {
         try {
-            axios.get(`http://localhost:8080/api/opportunity`).then(function (response) {
+            axios.get(`http://drona-ibm.herokuapp.com/api/opportunity`).then(function (response) {
                 setOpportunity(response.data)
             })
         } catch (error) {

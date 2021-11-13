@@ -5,7 +5,7 @@ import Head from 'next/head'
 
 async function loginUser(email: string, password: string) {
     try {
-        const response = await fetch('http://localhost:8080/auth/login', {
+        const response = await fetch('http://drona-ibm.herokuapp.com/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

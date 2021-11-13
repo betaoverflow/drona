@@ -7,7 +7,7 @@ import styles from '../../styles/Dashboard.module.scss'
 
 function toApprove(id: string) {
     try {
-        axios.put(`http://localhost:8080/api/questions/moderator/${id}`, { isApproved: 'true' }).then(function (response) {
+        axios.put(`http://drona-ibm.herokuapp.com/api/questions/moderator/${id}`, { isApproved: 'true' }).then(function (response) {
             // handle success
             console.log(response)
         })
@@ -22,7 +22,7 @@ export default function QuestionContribute() {
     useEffect(() => {
         if (localStorage.getItem('token')) {
             try {
-                axios.get(`http://localhost:8080/api/questions`).then(function (response) {
+                axios.get(`http://drona-ibm.herokuapp.com/api/questions`).then(function (response) {
                     // handle success
                     setQuestions(response.data)
                 })

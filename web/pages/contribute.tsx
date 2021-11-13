@@ -10,7 +10,7 @@ async function handleSubmit(title: string, message: string) {
         message: message,
     })
     try {
-        const data = await axios.post(`http://localhost:8080/api/questions`, payload, {
+        const data = await axios.post(`http://drona-ibm.herokuapp.com/api/questions`, payload, {
             headers: { 'Content-Type': 'application/json' },
         })
         window.location.href = '/contribute'
