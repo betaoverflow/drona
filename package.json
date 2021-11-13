@@ -34,10 +34,10 @@
     "@types/body-parser": "^1.19.1",
     "@types/cors": "^2.8.12",
     "@types/jsonwebtoken": "8.5.5",
+    "@types/bcrypt": "5.0.0",
     "typescript": "4.4.4"
   },
   "devDependencies": {
-    "@types/bcrypt": "5.0.0",
     "@types/mongoose": "^5.11.97",
     "@types/pino": "^6.3.12"
   },
