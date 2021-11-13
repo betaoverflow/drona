@@ -6,7 +6,8 @@
   "author": "Aniket Pal <aniketindian8@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --config nodemon.json lib/server.ts"
+    "dev": "nodemon --config nodemon.json lib/server.ts",
+    "start": "node lib/server.ts"
   },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
