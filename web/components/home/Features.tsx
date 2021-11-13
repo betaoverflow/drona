@@ -6,7 +6,7 @@ const Featurescard = (props: any) => {
     return (
         <div className={styles.featurescard}>
             <div className={styles.logo}>
-                <img src={props.logo} alt="feature logo" />
+                <Image src={props.logo} alt="feature logo" />
             </div>
             <div className={styles.cardtext}>
                 <div className={styles.cardheading}>{props.Heading}</div>

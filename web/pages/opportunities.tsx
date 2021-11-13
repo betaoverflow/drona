@@ -4,7 +4,7 @@ import Head from 'next/head'
 import axios from 'axios'
 import { useState } from 'react'
 import styles from '../styles/Contribute.module.scss'
-
+import Image from 'next/image'
 async function handleSubmit(url: string, tag: string, company: string, role: string, logo: string) {
     const payload = JSON.stringify({
         url: url,
@@ -45,9 +45,9 @@ const Opportunities = () => {
             <div className={styles.container}>
                 <Grid container className={styles.card}>
                     <Grid item xs={12} sm={12} md={7}>
-                        <img
+                        <Image
                             src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636637981/drona-opportunity_mt1axs.png"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             alt="Opportunities UI drona"
                         />
                     </Grid>

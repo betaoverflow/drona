@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Grid, Button, TextField } from '@material-ui/core'
 import styles from '../styles/admin.module.scss'
 import Head from 'next/head'
+import Image from 'next/image'
 
 async function loginUser(email: string, password: string) {
     try {
@@ -46,9 +47,9 @@ const Admin = () => {
             <div className={styles.container}>
                 <Grid container className={styles.card}>
                     <Grid item xs={12} sm={12} md={7}>
-                        <img
+                        <Image
                             src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635971918/login-drona_ae2rap.png"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             alt="admin drona UI"
                         />
                     </Grid>

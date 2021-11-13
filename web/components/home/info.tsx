@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from '../../styles/info.module.scss'
-
+import Image from 'next/image'
 const Infocard = (props: any) => {
     return (
         <div className={styles.infocard}>
             <div className={styles.logo}>
-                <img src={props.logo} alt="logo" />
+                <Image src={props.logo} alt="logo" />
             </div>
             <div className={styles.cardtext}>
                 <div className={styles.cardheading}>{props.Heading}</div>

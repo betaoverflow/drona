@@ -3,6 +3,7 @@ import { Grid, Button, TextField } from '@material-ui/core'
 import styles from '../styles/Contribute.module.scss'
 import Head from 'next/head'
 import axios from 'axios'
+import Image from 'next/image'
 
 async function handleSubmit(title: string, message: string) {
     const payload = JSON.stringify({
@@ -36,9 +37,9 @@ const Contribute = () => {
             <div className={styles.container}>
                 <Grid container className={styles.card}>
                     <Grid item xs={12} sm={12} md={7}>
-                        <img
+                        <Image
                             src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635971918/contribute-img-drona_hjcqbi.png"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            // style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             alt="contribute UI fixed"
                         />
                     </Grid>

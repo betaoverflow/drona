@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../../styles/about.module.scss'
-
+import Image from 'next/image'
 const Aboutcard = (props: any) => {
     return (
         <div className={styles.aboutcard}>
@@ -9,7 +9,7 @@ const Aboutcard = (props: any) => {
                 <div className={styles.cardsubheading}>{props.Subheading}</div>
             </div>
             <div className={styles.logo}>
-                <img src={props.logo} alt="logo" />
+                <Image src={props.logo} alt="logo" />
             </div>
         </div>
     )
