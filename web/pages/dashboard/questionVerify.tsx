@@ -16,7 +16,7 @@ function toApprove(id: string) {
     }
 }
 
-export default function questionContribute() {
+export default function QuestionContribute() {
     const [questions, setQuestions] = useState<any[]>([])
 
     useEffect(() => {

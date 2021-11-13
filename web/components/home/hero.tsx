@@ -5,11 +5,11 @@ const Hero: React.FC = () => {
     return (
         <div className={styles.heroContainer}>
             <div className={styles.leftContainer}>
-                <h1 className={styles.heading}> Empowering everyone to code with IBM's eye</h1>
+                <h1 className={styles.heading}> Empowering everyone to code with IBMs eye</h1>
                 <p className={styles.subheading}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus velit eget magna tincidunt, nec sollicitudin neque
                     ultrices. Sed lobortis eros sit amet venenatis accumsan. Integer sit amet sollicitudin purus. Proin fringilla iaculis
-                    felis in mollis. Donec suscipit iaculis neque, vel ultricies diam consequat non.{' '}
+                    felis in mollis. Donec suscipit iaculis neque, vel ultricies diam consequat non.
                 </p>
                 <div className={styles.buttons}>
                     <div className={styles.demo}>Watch a demo</div>

@@ -5,13 +5,12 @@ const Infocard = (props: any) => {
     return (
         <div className={styles.infocard}>
             <div className={styles.logo}>
-                <img src={props.logo} />
+                <img src={props.logo} alt="logo" />
             </div>
             <div className={styles.cardtext}>
                 <div className={styles.cardheading}>{props.Heading}</div>
                 <div className={styles.cardsubheading}>{props.Subheading}</div>
             </div>
-            
         </div>
     )
 }
@@ -57,4 +56,4 @@ const Info = () => {
     )
 }
 
-export default Info;
+export default Info

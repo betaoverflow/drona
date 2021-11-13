@@ -1,18 +1,17 @@
-import React from 'react';
-import styles from '../../styles/features.module.scss';
+import React from 'react'
+import styles from '../../styles/features.module.scss'
 import Image from 'next/image'
 
 const Featurescard = (props: any) => {
     return (
         <div className={styles.featurescard}>
             <div className={styles.logo}>
-                <img src={props.logo} />
+                <img src={props.logo} alt="feature logo" />
             </div>
             <div className={styles.cardtext}>
                 <div className={styles.cardheading}>{props.Heading}</div>
                 <div className={styles.cardsubheading}>{props.Subheading}</div>
             </div>
-            
         </div>
     )
 }
@@ -47,9 +46,9 @@ const Featurescarddata = [
 ]
 
 const Features: React.FC = () => {
-    return(
+    return (
         <>
-        <div className={styles.features}>
+            <div className={styles.features}>
                 <div className={styles.leftfeatures}>
                     <div className={styles.featuresheading}>App Features</div>
                     <div className={styles.featurecards}>
@@ -59,9 +58,8 @@ const Features: React.FC = () => {
                     </div>
                 </div>
                 <div className={styles.rightfeatures}>
-
                     <div className={styles.image1}>
-                        <Image 
+                        <Image
                             className={styles.mainImage1}
                             src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636807630/screen3_xyhf08.svg"
                             width={380}
@@ -70,7 +68,7 @@ const Features: React.FC = () => {
                         />
                     </div>
 
-                    <div className={styles.image2}> 
+                    <div className={styles.image2}>
                         <Image
                             src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636807636/screen2_zhwtr8.svg"
                             width={380}
@@ -80,7 +78,6 @@ const Features: React.FC = () => {
                         />
                     </div>
                 </div>
-                
             </div>
         </>
     )

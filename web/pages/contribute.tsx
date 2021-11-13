@@ -39,6 +39,7 @@ const Contribute = () => {
                         <img
                             src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635971918/contribute-img-drona_hjcqbi.png"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            alt="contribute UI fixed"
                         />
                     </Grid>
                     <Grid container item xs={12} sm={12} md={5} alignItems="center" direction="column" style={{ padding: 10 }}>

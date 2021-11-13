@@ -1,8 +1,7 @@
 import axios from 'axios'
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
-export default function opportunityVerify() {
+export default function OpportunityVerify() {
     const [opportunity, setOpportunity] = useState<any[]>([])
 
     useEffect(() => {
