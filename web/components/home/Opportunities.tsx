@@ -8,10 +8,10 @@ const Opportunities: React.FC = () => {
             <div className={styles.contribute}>
                 <div className={styles.container}>
                     <div className={styles.text} style={{ color: '#fff' }}>
-                        <h1>Never miss a deadline again, and stay updated about new opportunities.</h1>
+                        <h1>Never let anyone miss a deadline again with the power of Crowdsource</h1>
                         <div className={styles.buttons}>
                             <div className={styles.download}>
-                                <Link href="/opportunities">View Opportunities</Link>
+                                <Link href="/opportunities">Add Opportunities</Link>
                             </div>
                         </div>
                     </div>
