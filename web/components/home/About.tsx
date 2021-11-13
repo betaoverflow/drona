@@ -9,7 +9,7 @@ const Aboutcard = (props: any) => {
                 <div className={styles.cardsubheading}>{props.Subheading}</div>
             </div>
             <div className={styles.logo}>
-                <Image src={props.logo} alt="logo" />
+                <img src={props.logo} alt="logo" />
             </div>
         </div>
     )
