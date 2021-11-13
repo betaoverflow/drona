@@ -11,7 +11,7 @@ router.get('/', (req: Request, res: Response) => {
 })
 
 router.post('/run', async (req: Request, res: Response) => {
-    // using lang as acro for language and setting default as cpp
+    // using lang as acronym for language and setting default as cpp
     const lang: string | undefined = req.body.lang
     const code: string | undefined = req.body.code
 
