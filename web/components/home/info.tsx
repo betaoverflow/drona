@@ -20,7 +20,7 @@ const Infocarddata = [
     {
         id: 1,
         // logo: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1636028569/create_a4ndl4.svg',
-        logo: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1636736341/image-removebg-preview_22_00_onlwlf.png',
+        logo: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1636736018/image-removebg-preview_22_ruqy0s.png',
         Heading: 'Add your code',
         Subheading: 'Click a picture of the code written on the copy.',
     },
