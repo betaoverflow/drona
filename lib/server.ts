@@ -1,9 +1,9 @@
-const express=require('express')
-const cors=require('cors')
+const express = require('express')
+const cors = require('cors')
 require('dotenv').config()
 
 const database = require('../database/db')
-const PORT = process.env.PORT as string | number
+const PORT = process.env.PORT
 
 // middlewares
 const app = express()
@@ -21,6 +21,6 @@ app.use('/api/questions', questionRoutes)
 app.use('/auth', authRoutes)
 app.use('/api/opportunity', opportunityRoutes)
 
-app.listen(PORT, () => {
+app.listen(PORT || 8080, () => {
     console.log('Server running at: ' + PORT)
 })
