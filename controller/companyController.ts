@@ -20,6 +20,7 @@ router.post('/', (req: Request, res: Response) => {
         tag: req.body.tag,
         company: req.body.company,
         role: req.body.role,
+        logo: req.body.logo,
     })
 
     newCompany.save((err: any, response: any) => {
@@ -37,6 +38,7 @@ router.put('/moderator/:id', (req: Request, res: Response) => {
         tag: req.body.tag,
         company: req.body.company,
         role: req.body.role,
+        logo:req.body.logo,
         isApproved: req.body.isApproved,
     }
 
