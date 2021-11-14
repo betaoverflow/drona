@@ -11,7 +11,7 @@ const Opportunities: React.FC = () => {
                         <h1>Never let anyone miss a deadline again with the power of Crowdsource</h1>
                         <div className={styles.buttons}>
                             <div className={styles.download}>
-                                <Link href="/opportunities">Add Opportunities</Link>
+                                <Link href="/addOpportunity">Add Opportunities</Link>
                             </div>
                         </div>
                     </div>

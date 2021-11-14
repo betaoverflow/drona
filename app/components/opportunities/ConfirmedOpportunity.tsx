@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Text } from '../Themed'
 
 interface company {
-    id: number
+    _id: number
     url: string
     tag: string
     company: string
@@ -33,3 +34,5 @@ export default function ConfirmedOpportunity() {
 
     return ConfirmedOpportunities
 }
+
+
