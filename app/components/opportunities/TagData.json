@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "tag": "Internship"
+    },
+    {
+        "id": 2,
+        "tag": "Full-Time"
+    },
+    {
+        "id": 3,
+        "tag": "Others"
+    }
+]
