@@ -45,7 +45,7 @@ export default function OpportunityVerify() {
                 <link rel="icon" href="/256x256.png" />
             </Head>
 
-            <div>
+            <div className="opportunities mt2">
                 {opportunities.map(opportunity => {
                     return (
                         <div key={opportunity._id}>
