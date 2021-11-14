@@ -18,9 +18,9 @@ const Hero: React.FC = () => {
             </div>
             <div className={styles.rightContainer}>
                 <img
-                    src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636009473/drona-homeui_xqlfkq.png"
-                    width={380}
-                    height={700}
+                    src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636871242/screen1_fqyyck.svg"
+                    width={300}
+                    height={620}
                     className={styles.mainImage}
                     alt="Drona mobile app home screen"
                 />
