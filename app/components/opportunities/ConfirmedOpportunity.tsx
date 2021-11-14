@@ -25,7 +25,7 @@ export default function ConfirmedOpportunity() {
         }
     })
 
-    let ConfirmedOpportunities: any = []
+    let ConfirmedOpportunities: company[] = []
     for (let i = 0; i < opportunity.length; i++) {
         if (opportunity[i].isApproved == true) {
             ConfirmedOpportunities.push(opportunity[i])
