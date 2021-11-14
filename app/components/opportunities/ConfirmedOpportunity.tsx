@@ -1,8 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Text } from '../Themed'
 
 interface company {
-    id: number
+    _id: number
     url: string
     tag: string
     company: string
@@ -24,7 +25,7 @@ export default function ConfirmedOpportunity() {
         }
     })
 
-    let ConfirmedOpportunities: company[] = []
+    let ConfirmedOpportunities: any = []
     for (let i = 0; i < opportunity.length; i++) {
         if (opportunity[i].isApproved == true) {
             ConfirmedOpportunities.push(opportunity[i])
@@ -33,3 +34,5 @@ export default function ConfirmedOpportunity() {
 
     return ConfirmedOpportunities
 }
+
+

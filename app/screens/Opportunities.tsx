@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ListRenderItem } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 import { View } from '../components/Themed'
 import Opportunity from '../components/opportunities/opportunity'
 import OpportunityType from '../components/opportunities/opportunityType'
-import oppData from '../components/opportunities/opporutnitiesData.json'
+import ConfirmedOpportunities from '../components/opportunities/ConfirmedOpportunity'
 import styled from '@emotion/native'
 
 const renderItem: ListRenderItem<OpportunityType> = ({ item }) => (
@@ -17,7 +17,7 @@ const CustomSeparator = styled.View`
 `
 
 export default function Opportunities() {
-    const [opportunites, setOpportunities] = useState<OpportunityType[] | null>(oppData)
+    let opportunites = ConfirmedOpportunities()
 
     return (
         <>
@@ -27,7 +27,7 @@ export default function Opportunities() {
                     ItemSeparatorComponent={CustomSeparator}
                     data={opportunites}
                     renderItem={renderItem}
-                    keyExtractor={item => item.id}
+                    keyExtractor={item => item._id}
                 />
             </View>
         </>
