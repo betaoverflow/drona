@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
-import baseAddress from '../utils/baseAddress'
 import { View, Text } from './Themed'
 import { Transition, Transitioning } from 'react-native-reanimated'
 import { MaterialIcons } from '@expo/vector-icons'
@@ -21,7 +20,7 @@ function ConfirmedQuestions() {
     const [questions, setQuestions] = useState<any[]>([])
     useEffect(() => {
         try {
-            axios.get(`${baseAddress}/api/questions`).then(function (response) {
+            axios.get(`http://drona-ibm.herokuapp.com/api/questions`).then(function (response) {
                 // handle success
                 setQuestions(response.data)
             })
@@ -61,7 +60,7 @@ function ConfirmedQuestions() {
 
                                     {question._id === currentIndex && (
                                         <View style={styles.block}>
-                                            <Text>{question.message}</Text>
+                                            <Text style={styles.message}>{question.message}</Text>
                                         </View>
                                     )}
                                 </View>
@@ -86,6 +85,7 @@ const styles = StyleSheet.create({
     cardContainer: {
         minWidth: '100%',
         padding: 10,
+      
     },
     card: {
         flexGrow: 1,
@@ -103,5 +103,10 @@ const styles = StyleSheet.create({
     heading: {
         fontSize: 18,
         fontWeight: 'bold',
+        color:'#fff'
     },
+    message: {
+        color: '#fff',
+        fontWeight: 'bold',
+    }
 })

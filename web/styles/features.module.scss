@@ -149,10 +149,18 @@
     .image2{
         margin-top: 10rem;
     }
+    
+    .image1 img{  
+        width: 200px;
+    }
+
+    .image2 img{  
+        width: 200px;
+    }
 
     .rightfeatures {
         width: 100%;
-        height: 40vh;
+        height: 50vh;
         display: flex;
         align-items: center;
         justify-content: center;
