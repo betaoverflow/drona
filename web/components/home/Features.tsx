@@ -59,7 +59,7 @@ const Features: React.FC = () => {
                 <div className={styles.rightfeatures}>
                     <div className={styles.image1}>
                         <img
-                            className={styles.mainImage1}
+                            // className={styles.mainImage1}
                             src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636807630/screen3_xyhf08.svg"
                             width={380}
                             height={700}
