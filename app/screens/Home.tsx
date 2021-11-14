@@ -13,10 +13,10 @@ export default function Home({ navigation }: RootTabScreenProps<'Home'>) {
                         <View style={styles.row}>
                             <View style={styles.column1}>
                                 <Text style={styles.title}>Run your hand-written code.</Text>
-                                <Text>Run your hand-written code and code on your phone in three clicks</Text>
+                                <Text style={styles.descp}>Run your hand-written code and code on your phone in three clicks</Text>
                             </View>
                             <View style={styles.column2}>
-                                <Image source={require('../assets/images/test.png')} />
+                                <Image style={{marginLeft:-10}} source={require('../assets/images/test.png')} />
                             </View>
                         </View>
                     </LinearGradient>
@@ -26,10 +26,10 @@ export default function Home({ navigation }: RootTabScreenProps<'Home'>) {
                         <View style={styles.row}>
                             <View style={styles.column1}>
                                 <Text style={styles.title}>Practice from unlimited questions</Text>
-                                <Text>Practice from unlimited questions through crowdsourcing and our editor.</Text>
+                                <Text style={styles.descp}>Practice from unlimited questions through crowdsourcing and our editor.</Text>
                             </View>
                             <View style={styles.column2}>
-                                <Image source={require('../assets/images/test.png')} />
+                                <Image style={{marginLeft:-10}} source={require('../assets/images/test.png')} />
                             </View>
                         </View>
                     </LinearGradient>
@@ -39,10 +39,10 @@ export default function Home({ navigation }: RootTabScreenProps<'Home'>) {
                         <View style={styles.row}>
                             <View style={styles.column1}>
                                 <Text style={styles.title}>Get constant updates</Text>
-                                <Text>Get constant updates on internship, oss, placement, and other opportunities.</Text>
+                                <Text style={styles.descp}>Get constant updates on internship, oss, placement, and other opportunities.</Text>
                             </View>
                             <View style={styles.column2}>
-                                <Image source={require('../assets/images/test.png')} />
+                                <Image style={{marginLeft:-10}} source={require('../assets/images/test.png')} />
                             </View>
                         </View>
                     </LinearGradient>
@@ -86,4 +86,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         paddingTop: 5,
     },
+    descp: {
+        color: "#fff",
+        fontWeight:"bold"
+    }
 })
