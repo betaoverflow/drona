@@ -16,7 +16,7 @@ async function handleSubmit(url: string, tag: string, company: string, role:stri
         const data = await axios.post(`http://drona-ibm.herokuapp.com/api/opportunity`, payload, {
             headers: { 'Content-Type': 'application/json' },
         })
-        // window.location.href = '/addOpportunity'
+        window.location.href = '/addOpportunity'
         console.log(data, 'Opportunity has been added')
     } catch (error) {
         console.log('Error while adding opportunity to database' + error)
@@ -42,7 +42,7 @@ const Contribute = () => {
                 <Grid container className={styles.card}>
                     <Grid item xs={12} sm={12} md={7}>
                         <img
-                            src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635971918/contribute-img-drona_hjcqbi.png"
+                            src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1636637981/drona-opportunity_mt1axs.png"
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             alt="contribute UI fixed"
                         />
