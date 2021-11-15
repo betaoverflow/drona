@@ -24,6 +24,7 @@ const CustomSeparator = styled.View`
 export default function Opportunities() {
     let opportunites = ConfirmedOpportunities()
     const [tag, _] = useState<TagType[] | null>(TagData)
+    const [selectedTag, setSelectedTag] = useState<TagType | null>();
 
     return (
         <View>
