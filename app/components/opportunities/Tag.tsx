@@ -1,26 +1,40 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { View } from '../Themed'
 import styled from '@emotion/native'
 import TagType from './TagType'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
-const Tag = styled.Text`
-    color: #fff;
-    background-color: #454545;
+const TagComponent = styled.Text`
     border-radius: 20px;
-    padding: 12px;
-    height: 45px;
-    margin-left: 14px;
+    padding: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height:40px;
+    margin-left: 7px;
 `
 
-const Opportunity: React.FC<TagType> = ({ tag }) => {
+interface TagParentType {
+    tag: string,
+    selectedTag: number,
+    id: number,
+    setSelectedTag: (id: number) => void
+}
+
+const Tag: React.FC<TagParentType> = ({ id, tag, selectedTag, setSelectedTag}) => {
+    const backgroundColor = selectedTag === id ? "#50C878" : "#000";
+    const textColor = "#fff";
+
     return (
         <View style={{ alignItems: 'center', marginBottom: 10 }}>
-            <TouchableOpacity onPress={() => {}}>
-                <Tag>{tag}</Tag>
+            <TouchableOpacity onPress={() => setSelectedTag(id)} >
+                <TagComponent
+                    style={[{backgroundColor: backgroundColor}, { color: textColor }]}
+                >
+                    {tag}
+                </TagComponent>
             </TouchableOpacity>
         </View>
     )
 }
 
-export default Opportunity
+export default Tag

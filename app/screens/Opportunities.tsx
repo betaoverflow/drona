@@ -14,7 +14,7 @@ const renderCompany: ListRenderItem<OpportunityType> = ({ item }) => (
     <Opportunity id={item.id} url={item.url} tag={item.tag} company={item.company} role={item.role} logo={item.logo} />
 )
 
-const renderTag: ListRenderItem<TagType> = ({ item }) => <Tag id={item.id} tag={item.tag} />
+
 
 const CustomSeparator = styled.View`
     width: 100%;
@@ -24,12 +24,15 @@ const CustomSeparator = styled.View`
 export default function Opportunities() {
     let opportunites = ConfirmedOpportunities()
     const [tag, _] = useState<TagType[] | null>(TagData)
-    const [selectedTag, setSelectedTag] = useState<TagType | null>();
+    const [selectedTag, setSelectedTag] = useState<number>(1);
 
+    const renderTag: ListRenderItem<TagType> = ({ item }) => <Tag setSelectedTag={setSelectedTag} id={item.id} selectedTag={selectedTag} tag={item.tag} />
+    
     return (
         <View>
-            <View style={{ height: 10 }}></View>
-            <FlatList data={tag} horizontal renderItem={renderTag} keyExtractor={item => item.id} />
+            <View style={{ height: 20 }}></View>
+            <FlatList data={tag} horizontal renderItem={renderTag} extraData={selectedTag} keyExtractor={item => item.id} />
+            <View style={{ height: 20 }}></View>
             <FlatList
                 ItemSeparatorComponent={CustomSeparator}
                 data={opportunites}
