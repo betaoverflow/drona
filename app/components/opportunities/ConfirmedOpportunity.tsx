@@ -12,25 +12,20 @@ interface company {
     isApproved: boolean
 }
 
-export default function ConfirmedOpportunity() {
-    const [opportunity, setOpportunity] = useState<company[]>([])
-
-    useEffect(() => {
-        try {
-            axios.get(`http://drona-ibm.herokuapp.com/api/opportunity`).then(function (response) {
-                setOpportunity(response.data)
-            })
-        } catch (error) {
-            console.log(error)
-        }
-    })
+export default async function ConfirmedOpportunity() {
+    let opportunity: company[] | null = []
+    
+    try {
+        await axios.get(`http://drona-ibm.herokuapp.com/api/opportunity`).then(function (response) {
+            opportunity = response.data
+        })
+    } catch (error) {
+        console.log(error)
+    }
 
     let ConfirmedOpportunities: company[] = []
-    for (let i = 0; i < opportunity.length; i++) {
-        if (opportunity[i].isApproved == true) {
-            ConfirmedOpportunities.push(opportunity[i])
-        }
-    }
+
+    ConfirmedOpportunities = opportunity.filter(item => item.isApproved === true);
 
     return ConfirmedOpportunities
 }

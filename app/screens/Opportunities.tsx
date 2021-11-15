@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ListRenderItem } from 'react-native'
 import { FlatList } from 'react-native-gesture-handler'
 import { View } from '../components/Themed'
@@ -9,6 +9,9 @@ import styled from '@emotion/native'
 import Tag from '../components/opportunities/Tag'
 import TagType from '../components/opportunities/TagType'
 import TagData from '../components/opportunities/TagData.json'
+import company from '../components/opportunities/companyType'
+import filterOpportunities from '../components/opportunities/FilterOpportunities'
+import axios from 'axios'
 
 const renderCompany: ListRenderItem<OpportunityType> = ({ item }) => (
     <Opportunity id={item.id} url={item.url} tag={item.tag} company={item.company} role={item.role} logo={item.logo} />
@@ -22,12 +25,30 @@ const CustomSeparator = styled.View`
 `
 
 export default function Opportunities() {
-    let opportunites = ConfirmedOpportunities()
+    const [opportunity, setOpportunity] = useState<company[]>([])
+    const [filteredOpportunity, setFilteredOpportunity] = useState<company[]>()
     const [tag, _] = useState<TagType[] | null>(TagData)
     const [selectedTag, setSelectedTag] = useState<number>(1);
-
+    
     const renderTag: ListRenderItem<TagType> = ({ item }) => <Tag setSelectedTag={setSelectedTag} id={item.id} selectedTag={selectedTag} tag={item.tag} />
     
+    useEffect(() => {
+        try {
+            axios.get(`http://drona-ibm.herokuapp.com/api/opportunity`).then(function (response) {
+                setOpportunity(response.data)
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }, [])
+
+    useEffect(() => {
+        let res = filterOpportunities(opportunity, tag![selectedTag - 1]);
+        console.log(res);
+        setFilteredOpportunity(res)
+
+    }, [selectedTag])
+
     return (
         <View>
             <View style={{ height: 20 }}></View>
@@ -35,7 +56,7 @@ export default function Opportunities() {
             <View style={{ height: 20 }}></View>
             <FlatList
                 ItemSeparatorComponent={CustomSeparator}
-                data={opportunites}
+                data={filteredOpportunity}
                 renderItem={renderCompany}
                 keyExtractor={item => item._id}
             />
