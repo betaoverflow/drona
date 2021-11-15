@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
     cardContainer: {
         minWidth: '100%',
         padding: 10,
-      
     },
     card: {
         flexGrow: 1,
@@ -103,10 +102,10 @@ const styles = StyleSheet.create({
     heading: {
         fontSize: 18,
         fontWeight: 'bold',
-        color:'#fff'
+        color: '#fff',
     },
     message: {
         color: '#fff',
         fontWeight: 'bold',
-    }
+    },
 })

@@ -77,8 +77,8 @@ const Opportunity: React.FC<OpportunityType> = ({ url, tag, role, company, logo 
                 </OppurtunityContent>
             </OpportunityCard>
             <CompanyContent>
-                <Company>{company}</Company>
-                <Tag>{tag}</Tag>
+                <Company> {company} </Company>
+                <Tag> {tag} </Tag>
             </CompanyContent>
         </View>
     )
