@@ -19,28 +19,30 @@ const Featurescarddata = [
     {
         id: 1,
         logo: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1636054981/Feature_Icon_with_circle_wzodhy.svg',
-        Heading: 'Headline',
-        Subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum porta magna at blandit a.',
+        Heading: 'Code with 3 clicks',
+        Subheading: 'Use our easy-to-use application and help code from anywhere with our OCR scanner and compiler.',
     },
 
     {
         id: 2,
         logo: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1636054981/Feature_Icon_with_circle4_sg6n5p.svg',
-        Heading: 'Headline',
-        Subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum porta magna at blandit a.',
+        Heading: 'Get instant notifications on your app',
+        Subheading: 'Never miss a deadline again because we will remind you to check out the opportunity everytime we find a new one.',
     },
 
     {
         id: 3,
         logo: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1636054981/Feature_Icon_with_circle3_whxif3.svg',
-        Heading: 'Headline',
-        Subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum porta magna at blandit a.',
+        Heading: 'No more beating around the bush.',
+        Subheading:
+            'Get the best questions with the power of community specially compiled for your needs practice our questions daily to become interview ready.',
     },
     {
         id: 4,
         logo: 'https://res.cloudinary.com/dguy8qpzi/image/upload/v1636054982/Feature_Icon_with_circle_2_nvhn9u.svg',
-        Heading: 'Headline',
-        Subheading: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum porta magna at blandit a.',
+        Heading: 'Opportunities that fit your goals',
+        Subheading:
+            "Stay updated with all the latest and best suited opportunities for you from the world's leading Tech Giants & Startups.",
     },
 ]
 
