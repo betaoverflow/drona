@@ -125,7 +125,13 @@ The biggest accomplishment for us was that we learned so many new things in the 
 
 
 ## What's next for Drona 🔥
-
+Apart from the code scanner and compiler , neural search question bank and opputunities we plan to work on several features to generate revenue from the application 
+- Virtual Classroom: Creating an AR/VR application for a variety of courses with modules with animated models to make learning fun! 
+- Neural search network: Use cloud-native neural search framework to give user-centric questions 
+- Mentor Support: Chat with mentors and get resume reviews from excelling professionals in your field. 
+- Automated opportunities: Receive notifications and emails for opportunities that are right for you and never miss a deadline again! 
+- Curated Learning Content: Top courses in a fun interactive way to help you learn better with only your smartphone 
+- Learner's community: Huge community to interact with and ask your doubts regarding everything! Network and make connections as well
 
 
 
