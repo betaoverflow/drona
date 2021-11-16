@@ -3,6 +3,12 @@
 <h1 align='center'>Drona</h1>
 </p>
 
+## Inspiration 💡
+- In most developing countries, which account to over 85% of the world, the ratio of CS students versus the number of computers available is highly skewed and most students are still learning programming via pen-and-paper.
+- 4 out of 5 people have access to smartphones versus only 2 out of 5 having access to computers. This results in 95% of students starting coding properly when they enter university level.
+- An average computer science teacher in developing countries spends more than 60% of the time checking the code or correcting papers handwritten by the students due to lack of computer
+- 71% of parents in the United States are concerned with the amount of time their children spend in front of computer screens, which ultimately results in 60 million people who have computer vision syndrome
+- 18 out of 25 students miss out on opportunities because of lack of information which results in frustration, anxiety, and stress.
 
 
 ## What is it? ⛹️‍♂️
