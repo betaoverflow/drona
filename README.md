@@ -103,13 +103,25 @@ We used Next.js in the frontend of web application and React Native for mobile a
 
 
 ## Accomplishments that we're proud of 😎
-
-
-
-
+The biggest accomplishment for us was that we learned so many new things in the entire journey. We implemented OCR, TypeScript, Axios and API calls. We were able to overcome all the challenges and were able to create a completely functional prototype the way we had envisioned. It was tiring, but fun as well. We are most proud of the fact that this product will be able to help many students and teachers across the globe.
 
 ## Built With 💕
-
+- [ ] IBM Watson
+- [ ] IBM API Connect
+- [ ] IBM Cloud
+- [ ] React Native
+- [ ] Reactjs
+- [ ] Nextjs 
+- [ ] Nodejs
+- [ ] Javascript
+- [ ] Express
+- [ ] Typescript
+- [ ] MongoDB
+- [ ] Mongoose
+- [ ] Cloudinary
+- [ ] Scss
+- [ ] Vercel
+- [ ] Heroku
 
 
 ## What's next for Drona 🔥
