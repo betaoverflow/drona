@@ -13,7 +13,7 @@
 
 ## What is it? ⛹️‍♂️
 Drona has 3 software subsystems.
-1. A codegrabber which helps users run their code written in their notebook. Users just needs to click a picture of the code they have written , the IBM Watson API extracts the text and then user can edit in the theme based code editor and ultimately run it to get the output. 
+1. A codegrabber which helps users run their code written in their notebook. Users just needs to click a picture of the code they have written , the Max OCR model extracts the text and then user can edit in the theme based code editor and ultimately run it to get the output. 
 2. An application where users can get regular notifications on opportunities like internships, placements, scholarships and so on. This way the user will never miss a single deadline due to a lack of awareness.
 3. A question bank powered by crowdsourcing to give users more centric questions for practice. Even teachers spend more than 40% of their time preparing questions for several assignments and tests they can even pull up questions from the poll. The entire community can contribute by adding their favourite questions and can help others become better coders.
 
@@ -103,10 +103,10 @@ We used Next.js in the frontend of web application and React Native for mobile a
 
 
 ## Accomplishments that we're proud of 😎
-The biggest accomplishment for us was that we learned so many new things in the entire journey. Being a group of javascript developers, we tried our hands on typescript and react native this time. We learnt how to use Next.js and implement it with TypeScript and SCSS. Moreover, we created a progressive web app with offline support as well. As we wanted to read the handwritten text, we found out about OCR for text extraction. We researched on it and finally decided to try out the IBM Watson API which was something very new for us. We were able to overcome all the challenges and were able to create a completely functional prototype the way we had envisioned. It was tiring, but fun as well. We are most proud of the fact that this product will be able to help many students and teachers across the globe.
+The biggest accomplishment for us was that we learned so many new things in the entire journey. Being a group of javascript developers, we tried our hands on typescript and react native this time. We learnt how to use Next.js and implement it with TypeScript and SCSS. Moreover, we created a progressive web app with offline support as well. As we wanted to read the handwritten text, we found out about OCR for text extraction. We researched on it and finally decided to try out the MAX Optical Character Recognition created by IBM which was something very new for us. We were able to overcome all the challenges and were able to create a completely functional prototype the way we had envisioned. It was tiring, but fun as well. We are most proud of the fact that this product will be able to help many students and teachers across the globe.
 
 ## Built With 💕
-- [ ] IBM Watson
+- [ ] MAX Optical Character Recognition by IBM
 - [ ] IBM API Connect
 - [ ] IBM Cloud
 - [ ] React Native
