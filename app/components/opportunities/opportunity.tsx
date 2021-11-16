@@ -42,21 +42,23 @@ const CompanyContent = styled.View`
 
 const Company = styled.Text`
     color: #fff;
-    background-color: grey;
+    background-color: #333;
     border-radius: 20px;
-    padding: 3px;
+    padding: 6px;
     padding-left: 7px;
     padding-right: 7px;
+    height: 32px;
 `
 
 const Tag = styled.Text`
     color: #fff;
-    background-color: grey;
+    background-color: #333;
     border-radius: 20px;
-    padding: 3px;
+    padding: 6px;
     padding-left: 7px;
     padding-right: 7px;
     margin-left: 7px;
+    height: 32px;
 `
 
 const Role = styled.Text`
