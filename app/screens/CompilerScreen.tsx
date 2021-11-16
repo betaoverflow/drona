@@ -8,6 +8,7 @@ import { getTextFromMaxOcr } from '../components/compiler/maxOcr'
 import { StyleSheet } from 'react-native'
 import { WebView } from 'react-native-webview'
 import { MaterialIcons, AntDesign } from '@expo/vector-icons'
+import { COLORS } from '../constants'
 
 const Editor = () => {
     const [code, setCode] = useState('')
@@ -110,7 +111,7 @@ const Editor = () => {
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity onPress={handleSubmit} style={{ ...styles.button, ...styles.m1, ...styles.green }}>
+                <TouchableOpacity onPress={handleSubmit} style={{ ...styles.button, ...styles.m1, ...styles.primaryBtnColor }}>
                     <AntDesign name="codesquare" size={24} color="white" />
                     <Text style={styles.buttonText}>run code</Text>
                 </TouchableOpacity>
@@ -140,8 +141,8 @@ const styles = StyleSheet.create({
         marginBottom: 12,
         fontWeight: '700',
     },
-    green: {
-        backgroundColor: '#4ba469',
+    primaryBtnColor: {
+        backgroundColor: COLORS.blue,
     },
     button: {
         height: 40,

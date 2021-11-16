@@ -32,6 +32,10 @@ export const SIZES = {
   isSmallDevice: width < 375,
 }
 
+export const COLORS = {
+  blue: '#0B4068',
+}
+
 export const FONTS = {
   navTitle: { fontSize: SIZES.navTitle, fontWeight: "700" },
   largeTitleBold: { fontSize: SIZES.h2 },
@@ -47,5 +51,5 @@ export const FONTS = {
   body5: { fontSize: SIZES.body5, lineHeight: 22 },
 };
 
-const customTheme = {SIZES, FONTS};
+const customTheme = {SIZES, FONTS, COLORS};
 export default customTheme;

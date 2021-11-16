@@ -3,6 +3,7 @@ import { View } from '../Themed'
 import styled from '@emotion/native'
 import TagType from './TagType'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import { COLORS } from '../../constants'
 
 const TagComponent = styled.Text`
     border-radius: 20px;
@@ -21,7 +22,7 @@ interface TagParentType {
 }
 
 const Tag: React.FC<TagParentType> = ({ id, tag, selectedTag, setSelectedTag}) => {
-    const backgroundColor = selectedTag === id ? "#50C878" : "#000";
+    const backgroundColor = selectedTag === id ? COLORS.blue : "#000";
     const textColor = "#fff";
 
     return (
