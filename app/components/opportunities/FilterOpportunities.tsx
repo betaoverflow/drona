@@ -1,5 +1,4 @@
 import company from './companyType';
-import OpportunityType from './opportunityType'
 import TagType from './TagType'
 
 const filterOpportunities = (opportunities: company[], tag: TagType): company[] => {
