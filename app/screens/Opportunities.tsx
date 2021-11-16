@@ -28,28 +28,44 @@ export default function Opportunities() {
     const [opportunity, setOpportunity] = useState<company[]>([])
     const [filteredOpportunity, setFilteredOpportunity] = useState<company[]>()
     const [tag, _] = useState<TagType[] | null>(TagData)
-    const [selectedTag, setSelectedTag] = useState<number>(1);
+    const [selectedTag, setSelectedTag] = useState<number>(-1);
     
     const renderTag: ListRenderItem<TagType> = ({ item }) => <Tag setSelectedTag={setSelectedTag} id={item.id} selectedTag={selectedTag} tag={item.tag} />
     
     useEffect(() => {
-        try {
-            axios.get(`http://drona-ibm.herokuapp.com/api/opportunity`).then(function (response) {
-                setOpportunity(response.data)
-            })
-        } catch (error) {
-            console.log(error)
-        }
+        const fetchOpportunities = async () => {
+            try {
+                console.log('initiali')
+                const res = await axios.get(`http://drona-ibm.herokuapp.com/api/opportunity`)
+                console.log("initialized", res.data)
+                
+                setOpportunity(res.data)
+
+                setSelectedTag(1);
+
+                let resFiltered = filterOpportunities(opportunity, tag![selectedTag - 1]);
+                console.log(resFiltered);
+                setFilteredOpportunity(resFiltered)
+                console.log("fin ", resFiltered)
+                
+            } catch (error) {
+                console.log(error)
+            }
+        }    
+
+        fetchOpportunities();
+
     }, [])
 
     useEffect(() => {
         let res = filterOpportunities(opportunity, tag![selectedTag - 1]);
         console.log(res);
         setFilteredOpportunity(res)
+        console.log("fin ", res)
 
     }, [selectedTag])
 
-    return (
+        return (
         <View>
             <View style={{ height: 20 }}></View>
             <FlatList data={tag} horizontal renderItem={renderTag} extraData={selectedTag} keyExtractor={item => item.id} />
