@@ -28,7 +28,7 @@
         .buttons {
             align-items: center;
             display: flex;
-            padding: 2rem;
+            padding: 2rem 0;
             cursor: pointer;
             @media screen and (max-width: 768px) {
                 flex-direction: column;
