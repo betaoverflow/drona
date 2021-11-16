@@ -43,10 +43,10 @@ Clone the project in localhost
 ```bash
 git clone https://github.com/betaoverflow/drona.git
 ```
-Install all the npm packages. Go into the web folder and type the following command to install all npm packages
+Install all the packages. Go into the web folder and type the following command to install all packages
 
 ```bash
-npm install
+yarn
 ```
 
 In order to run the application in development mode type the following command
