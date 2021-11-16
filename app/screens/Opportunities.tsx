@@ -35,18 +35,14 @@ export default function Opportunities() {
     useEffect(() => {
         const fetchOpportunities = async () => {
             try {
-                console.log('initiali')
                 const res = await axios.get(`http://drona-ibm.herokuapp.com/api/opportunity`)
-                console.log("initialized", res.data)
                 
                 setOpportunity(res.data)
 
                 setSelectedTag(1);
 
                 let resFiltered = filterOpportunities(opportunity, tag![selectedTag - 1]);
-                console.log(resFiltered);
                 setFilteredOpportunity(resFiltered)
-                console.log("fin ", resFiltered)
                 
             } catch (error) {
                 console.log(error)
@@ -59,9 +55,7 @@ export default function Opportunities() {
 
     useEffect(() => {
         let res = filterOpportunities(opportunity, tag![selectedTag - 1]);
-        console.log(res);
         setFilteredOpportunity(res)
-        console.log("fin ", res)
 
     }, [selectedTag])
 

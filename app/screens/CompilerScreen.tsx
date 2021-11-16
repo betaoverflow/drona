@@ -110,14 +110,17 @@ const Editor = () => {
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity onPress={handleSubmit} style={{ ...styles.button, ...styles.m1 }}>
+                <TouchableOpacity onPress={handleSubmit} style={{ ...styles.button, ...styles.m1, ...styles.green }}>
                     <AntDesign name="codesquare" size={24} color="white" />
                     <Text style={styles.buttonText}>run code</Text>
                 </TouchableOpacity>
             </View>
 
-            <View style={styles.output}>
-                <Text style={styles.buttonText}>{output}</Text>
+            <View style={styles.outputArea}>
+                <Text style={styles.outputText}>Output</Text>
+                <View style={styles.output}>
+                    <Text style={styles.buttonText}>{output ? output: 'Click on camera or gallery to upload image, edit and run your code'}</Text>
+                </View>
             </View>
         </View>
     )
@@ -129,6 +132,16 @@ const styles = StyleSheet.create({
     },
     buttonSmall: {
         width: 70,
+        fontWeight: '800',
+    },
+    outputText: {
+        fontSize: 19,
+        marginLeft: 18,
+        marginBottom: 12,
+        fontWeight: '700',
+    },
+    green: {
+        backgroundColor: '#4ba469',
     },
     button: {
         height: 40,
@@ -167,9 +180,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         width: 180,
     },
+    outputArea: {
+        marginTop: 50,
+    },
     output: {
         minHeight: 70,
-        marginTop: 50,
         width: 369,
         marginLeft: 'auto',
         marginRight: 'auto',
