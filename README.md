@@ -12,8 +12,10 @@
 
 
 ## What is it? ⛹️‍♂️
-
-
+Drona has 3 software subsystems.
+1. A codegrabber which helps users run their code written in their notebook. Users just needs to click a picture of the code they have written , the IBM Watson API extracts the text and then user can edit in the theme based code editor and ultimately run it to get the output. 
+2. An application where users can get regular notifications on opportunities like internships, placements, scholarships and so on. This way the user will never miss a single deadline due to a lack of awareness.
+3. A question bank powered by crowdsourcing to give users more centric questions for practice. Even teachers spend more than 40% of their time preparing questions for several assignments and tests they can even pull up questions from the poll. The entire community can contribute by adding their favourite questions and can help others become better coders.
 
 
 [![Starware](https://img.shields.io/badge/⭐-Starware-f5a91a?labelColor=black)](https://github.com/zepfietje/starware)
