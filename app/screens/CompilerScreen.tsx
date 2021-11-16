@@ -7,6 +7,7 @@ import { CameraOptions, launchCamera, launchImageLibrary } from 'react-native-im
 import { getTextFromMaxOcr } from '../components/compiler/maxOcr'
 import { StyleSheet } from 'react-native'
 import { WebView } from 'react-native-webview'
+import { MaterialIcons, AntDesign } from '@expo/vector-icons'
 
 const Editor = () => {
     const [code, setCode] = useState('')
@@ -93,27 +94,30 @@ const Editor = () => {
                 />
             </View>
 
-            <View>
+            <View style={styles.controls}>
                 <View style={styles.uploader}>
                     <TouchableOpacity
                         onPress={() => launchCamera(cameraOptions, imgCallback)}
                         style={{ ...styles.button, ...styles.m1, ...styles.buttonSmall }}
                     >
-                        <Text style={styles.buttonText}>Launch Camera</Text>
+                        <MaterialIcons name={'camera-alt'} size={24} color={'#fff'} />
                     </TouchableOpacity>
                     <TouchableOpacity
                         onPress={() => launchImageLibrary(cameraOptions, imgCallback)}
                         style={{ ...styles.button, ...styles.m1, ...styles.buttonSmall }}
                     >
-                        <Text style={styles.buttonText}>Select from gallery</Text>
+                        <MaterialIcons name={'upload-file'} size={24} color={'#fff'} />
                     </TouchableOpacity>
                 </View>
-                {/* <TextInput style={{ color: '#232323' }} multiline={true} numberOfLines={4} value={code} onChangeText={code => setCode(code)} /> */}
 
-                <TouchableOpacity onPress={handleSubmit} style={{ ...styles.button, ...styles.m3 }}>
-                    <Text style={styles.buttonText}>Run Code</Text>
+                <TouchableOpacity onPress={handleSubmit} style={{ ...styles.button, ...styles.m1 }}>
+                    <AntDesign name="codesquare" size={24} color="white" />
+                    <Text style={styles.buttonText}>run code</Text>
                 </TouchableOpacity>
-                <Text>{output}</Text>
+            </View>
+
+            <View style={styles.output}>
+                <Text style={styles.buttonText}>{output}</Text>
             </View>
         </View>
     )
@@ -124,16 +128,17 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     buttonSmall: {
-        width: 150,
+        width: 70,
     },
     button: {
         height: 40,
-        width: 250,
+        width: 130,
         alignSelf: 'center',
         color: '#fff',
         backgroundColor: '#232323',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
+        flexDirection: 'row',
         borderRadius: 12,
     },
     m3: {
@@ -148,10 +153,30 @@ const styles = StyleSheet.create({
     buttonText: {
         color: '#fff',
     },
+    controls: {
+        display: 'flex',
+        width: '90%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+    },
     uploader: {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
+        width: 180,
+    },
+    output: {
+        minHeight: 70,
+        marginTop: 50,
+        width: 369,
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        backgroundColor: '#333',
+        borderRadius: 12,
+        color: '#fff',
+        padding: 16,
     },
 })
 
