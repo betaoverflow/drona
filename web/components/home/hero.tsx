@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../../styles/Hero.module.scss'
+import Link from 'next/link'
 
 const Hero: React.FC = () => {
     return (
@@ -11,8 +12,12 @@ const Hero: React.FC = () => {
                     opportunity again and lastly be interview-ready with our crowdsourced question bank.
                 </p>
                 <div className={styles.buttons} style={{ justifyItems: 'left' }}>
-                    <div className={styles.demo}>Watch a demo</div>
-                    <div className={styles.download}>Download APK</div>
+                    <Link href="https://youtu.be/ytyjVZ5Htl8" passHref={true}>
+                        <div className={styles.demo}>Watch a demo</div>
+                    </Link>
+                    <Link href="https://bit.ly/ibmdronaapk" passHref={true}>
+                        <div className={styles.download}>Download APK</div>
+                    </Link>
                 </div>
             </div>
             <div className={styles.rightContainer}>
