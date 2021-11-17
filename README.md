@@ -112,7 +112,7 @@ Replace the `<password>` section of the string with your Database Access passwor
 ## How we built it 🧑‍💻
 We used Next.js in the frontend of web application and React Native for mobile application along with Node.js in the backend with MongoDB as our database. Next, we used the IBM Watson API for scanning the image and retrieving the handwritten text. The handwritten text will be displayed in a code editor with full syntax highlighting which was made using the MERN stack. For the second subsystem, we created a form which adds data to the database. Then we retrieved the data through axios and display the questions that are approved by the admin in a special private route. For the third subsystem, we made API calls to the opportunities database which was tested using IBM API Connect. The push notifications for the opportunities were made using Firebase. We also deployed our OCR backend using IBM Cloud.
 
-## Challenges we ran into 🥺
+![Archi diagram](https://user-images.githubusercontent.com/67703407/142231621-315972e5-4419-45cc-8b14-5ab2d03729c8.jpeg)
 
 
 ## Accomplishments that we're proud of 😎
