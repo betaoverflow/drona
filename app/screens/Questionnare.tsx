@@ -6,7 +6,7 @@ import { Text, View } from '../components/Themed'
 export default function TabTwoScreen() {
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.button} onPress={() => Linking.openURL('https://drona-drab.vercel.app/contribute')}>
+            <TouchableOpacity style={styles.button} onPress={() => Linking.openURL('https://drona-gamma.vercel.app/contribute')}>
                 <Text style={styles.title}>CONTRIBUTE</Text>
             </TouchableOpacity>
             <ConfirmedQuestions />
