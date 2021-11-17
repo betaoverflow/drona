@@ -1,7 +1,4 @@
 <p align='center'>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img src="https://res.cloudinary.com/dguy8qpzi/image/upload/v1635952594/achieve_hmzdar.png" height='150' />
 <h1 align='center'>Drona</h1>
 </p>
@@ -29,6 +26,16 @@ Drona has 3 software subsystems.
 Drona is Starware.  
 This means you're free to use the project, as long as you star its GitHub repository.  
 Your appreciation makes us grow and glow up. ⭐
+
+## Team ✨
+<table>
+  <tr>
+    <td align="center"><a href="https://aniket.live"><img src="https://avatars.githubusercontent.com/u/67703407?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aniket Pal</b></sub></a><br /><a href="#infra-Aniket762" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/betaoverflow/drona/commits?author=Aniket762" title="Tests">⚠️</a> <a href="#ideas-Aniket762" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-Aniket762" title="Design">🎨</a> <a href="#projectManagement-Aniket762" title="Project Management">📆</a> <a href="https://github.com/betaoverflow/drona/commits?author=Aniket762" title="Code">💻</a></td>
+    <td align="center"><a href="https://sumana.live/"><img src="https://avatars.githubusercontent.com/u/63084088?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sumana Basu</b></sub></a><br /><a href="#infra-sumana2001" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#ideas-sumana2001" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tutorial-sumana2001" title="Tutorials">✅</a> <a href="https://github.com/betaoverflow/drona/commits?author=sumana2001" title="Documentation">📖</a> <a href="https://github.com/betaoverflow/drona/commits?author=sumana2001" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/kumarshantanu01"><img src="https://avatars.githubusercontent.com/u/76111005?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kumar Shantanu</b></sub></a><br /><a href="#design-kumarshantanu01" title="Design">🎨</a> <a href="#video-kumarshantanu01" title="Videos">📹</a> <a href="https://github.com/betaoverflow/drona/commits?author=kumarshantanu01" title="Code">💻</a></td>
+    <td align="center"><a href="http://aabhassao.me"><img src="https://avatars.githubusercontent.com/u/58210877?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aabhas Sao </b></sub></a><br /><a href="#infra-aabhas-sao" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/betaoverflow/drona/commits?author=aabhas-sao" title="Code">💻</a></td>
+  </tr>
+</table>
 
 
 ## Prerequisites 👨‍💻
@@ -138,31 +145,3 @@ Apart from the code scanner and compiler , neural search question bank and opput
 - Automated opportunities: Receive notifications and emails for opportunities that are right for you and never miss a deadline again! 
 - Curated Learning Content: Top courses in a fun interactive way to help you learn better with only your smartphone 
 - Learner's community: Huge community to interact with and ask your doubts regarding everything! Network and make connections as well
-
-
-
-
-
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://aniket.live"><img src="https://avatars.githubusercontent.com/u/67703407?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aniket Pal</b></sub></a><br /><a href="#infra-Aniket762" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/betaoverflow/drona/commits?author=Aniket762" title="Tests">⚠️</a> <a href="#ideas-Aniket762" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-Aniket762" title="Design">🎨</a> <a href="#projectManagement-Aniket762" title="Project Management">📆</a> <a href="https://github.com/betaoverflow/drona/commits?author=Aniket762" title="Code">💻</a></td>
-    <td align="center"><a href="https://sumana.live/"><img src="https://avatars.githubusercontent.com/u/63084088?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sumana Basu</b></sub></a><br /><a href="#infra-sumana2001" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#ideas-sumana2001" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tutorial-sumana2001" title="Tutorials">✅</a> <a href="https://github.com/betaoverflow/drona/commits?author=sumana2001" title="Documentation">📖</a> <a href="https://github.com/betaoverflow/drona/commits?author=sumana2001" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/kumarshantanu01"><img src="https://avatars.githubusercontent.com/u/76111005?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kumar Shantanu</b></sub></a><br /><a href="#design-kumarshantanu01" title="Design">🎨</a> <a href="#video-kumarshantanu01" title="Videos">📹</a> <a href="https://github.com/betaoverflow/drona/commits?author=kumarshantanu01" title="Code">💻</a></td>
-    <td align="center"><a href="http://aabhassao.me"><img src="https://avatars.githubusercontent.com/u/58210877?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aabhas Sao </b></sub></a><br /><a href="#infra-aabhas-sao" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/betaoverflow/drona/commits?author=aabhas-sao" title="Code">💻</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
