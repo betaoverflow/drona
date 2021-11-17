@@ -1,0 +1,63 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Aniket762",
+      "name": "Aniket Pal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67703407?v=4",
+      "profile": "https://aniket.live",
+      "contributions": [
+        "infra",
+        "test",
+        "ideas",
+        "design",
+        "projectManagement",
+        "code"
+      ]
+    },
+    {
+      "login": "sumana2001",
+      "name": "Sumana Basu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63084088?v=4",
+      "profile": "https://sumana.live/",
+      "contributions": [
+        "infra",
+        "ideas",
+        "tutorial",
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "kumarshantanu01",
+      "name": "Kumar Shantanu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76111005?v=4",
+      "profile": "https://github.com/kumarshantanu01",
+      "contributions": [
+        "design",
+        "video",
+        "code"
+      ]
+    },
+    {
+      "login": "aabhas-sao",
+      "name": "Aabhas Sao ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58210877?v=4",
+      "profile": "http://aabhassao.me",
+      "contributions": [
+        "infra",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "drona",
+  "projectOwner": "betaoverflow",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

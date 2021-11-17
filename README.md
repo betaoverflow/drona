@@ -3,6 +3,9 @@
 <h1 align='center'>Drona</h1>
 </p>
 
+![DRONA COVER 1](https://user-images.githubusercontent.com/67703407/142220333-fdbd52ab-f248-4bc3-a2e9-5d6ef5dc230f.png)
+
+
 ## Inspiration 💡
 - In most developing countries, which account to over 85% of the world, the ratio of CS students versus the number of computers available is highly skewed and most students are still learning programming via pen-and-paper.
 - 4 out of 5 people have access to smartphones versus only 2 out of 5 having access to computers. This results in 95% of students starting coding properly when they enter university level.
@@ -23,6 +26,16 @@ Drona has 3 software subsystems.
 Drona is Starware.  
 This means you're free to use the project, as long as you star its GitHub repository.  
 Your appreciation makes us grow and glow up. ⭐
+
+## Team ✨
+<table>
+  <tr>
+    <td align="center"><a href="https://aniket.live"><img src="https://avatars.githubusercontent.com/u/67703407?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aniket Pal</b></sub></a><br /><a href="#infra-Aniket762" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/betaoverflow/drona/commits?author=Aniket762" title="Tests">⚠️</a> <a href="#ideas-Aniket762" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-Aniket762" title="Design">🎨</a> <a href="#projectManagement-Aniket762" title="Project Management">📆</a> <a href="https://github.com/betaoverflow/drona/commits?author=Aniket762" title="Code">💻</a></td>
+    <td align="center"><a href="https://sumana.live/"><img src="https://avatars.githubusercontent.com/u/63084088?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sumana Basu</b></sub></a><br /><a href="#infra-sumana2001" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#ideas-sumana2001" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tutorial-sumana2001" title="Tutorials">✅</a> <a href="https://github.com/betaoverflow/drona/commits?author=sumana2001" title="Documentation">📖</a> <a href="https://github.com/betaoverflow/drona/commits?author=sumana2001" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/kumarshantanu01"><img src="https://avatars.githubusercontent.com/u/76111005?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kumar Shantanu</b></sub></a><br /><a href="#design-kumarshantanu01" title="Design">🎨</a> <a href="#video-kumarshantanu01" title="Videos">📹</a> <a href="https://github.com/betaoverflow/drona/commits?author=kumarshantanu01" title="Code">💻</a></td>
+    <td align="center"><a href="http://aabhassao.me"><img src="https://avatars.githubusercontent.com/u/58210877?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aabhas Sao </b></sub></a><br /><a href="#infra-aabhas-sao" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/betaoverflow/drona/commits?author=aabhas-sao" title="Code">💻</a></td>
+  </tr>
+</table>
 
 
 ## Prerequisites 👨‍💻
@@ -99,7 +112,7 @@ Replace the `<password>` section of the string with your Database Access passwor
 ## How we built it 🧑‍💻
 We used Next.js in the frontend of web application and React Native for mobile application along with Node.js in the backend with MongoDB as our database. Next, we used the IBM Watson API for scanning the image and retrieving the handwritten text. The handwritten text will be displayed in a code editor with full syntax highlighting which was made using the MERN stack. For the second subsystem, we created a form which adds data to the database. Then we retrieved the data through axios and display the questions that are approved by the admin in a special private route. For the third subsystem, we made API calls to the opportunities database which was tested using IBM API Connect. The push notifications for the opportunities were made using Firebase. We also deployed our OCR backend using IBM Cloud.
 
-## Challenges we ran into 🥺
+![Archi diagram](https://user-images.githubusercontent.com/67703407/142231621-315972e5-4419-45cc-8b14-5ab2d03729c8.jpeg)
 
 
 ## Accomplishments that we're proud of 😎
@@ -132,8 +145,3 @@ Apart from the code scanner and compiler , neural search question bank and opput
 - Automated opportunities: Receive notifications and emails for opportunities that are right for you and never miss a deadline again! 
 - Curated Learning Content: Top courses in a fun interactive way to help you learn better with only your smartphone 
 - Learner's community: Huge community to interact with and ask your doubts regarding everything! Network and make connections as well
-
-
-
-
-
