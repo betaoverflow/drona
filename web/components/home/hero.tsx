@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
                     opportunity again and lastly be interview-ready with our crowdsourced question bank.
                 </p>
                 <div className={styles.buttons} style={{ justifyItems: 'left' }}>
-                    <Link href="https://youtu.be/ytyjVZ5Htl8" passHref={true}>
+                    <Link href="https://youtu.be/6pJpVtOlgMc" passHref={true}>
                         <div className={styles.demo}>Watch a demo</div>
                     </Link>
                     <Link href="https://bit.ly/ibmdronaapk" passHref={true}>
