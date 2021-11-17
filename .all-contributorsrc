@@ -31,6 +31,17 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "kumarshantanu01",
+      "name": "Kumar Shantanu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76111005?v=4",
+      "profile": "https://github.com/kumarshantanu01",
+      "contributions": [
+        "design",
+        "video",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
