@@ -3,6 +3,9 @@
 <h1 align='center'>Drona</h1>
 </p>
 
+![DRONA COVER 1](https://user-images.githubusercontent.com/67703407/142220333-fdbd52ab-f248-4bc3-a2e9-5d6ef5dc230f.png)
+
+
 ## Inspiration 💡
 - In most developing countries, which account to over 85% of the world, the ratio of CS students versus the number of computers available is highly skewed and most students are still learning programming via pen-and-paper.
 - 4 out of 5 people have access to smartphones versus only 2 out of 5 having access to computers. This results in 95% of students starting coding properly when they enter university level.
