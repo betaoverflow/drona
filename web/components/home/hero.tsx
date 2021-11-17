@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
             <div className={styles.leftContainer}>
                 <h1 className={styles.heading}> Empowering everyone to code with IBMs eye</h1>
                 <p className={styles.subheading}>
-                    Play around with code while we make sure you aren't lost! Join us and code laptop-free, stay updated and never miss an
+                    Play around with code while we make sure you are not lost! Join us and code laptop-free, stay updated and never miss an
                     opportunity again and lastly be interview-ready with our crowdsourced question bank.
                 </p>
                 <div className={styles.buttons} style={{ justifyItems: 'left' }}>
